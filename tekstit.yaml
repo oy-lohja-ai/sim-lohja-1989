@@ -1,0 +1,148 @@
+# SIM LOHJA 1989: kaikki ruudulla näkyvät tekstit yhdessä paikassa. Tekstejä voi muokata vapaasti, buildit lukevat
+# tekstit täältä.
+#
+# Kirjoitusasu täsmälleen kuten ruudulla. Kaikki arvot ovat tekstiä (myös numerot). Lainausmerkit "..." tarvitaan,
+# jos teksti alkaa merkillä # " [ { tai siinä on ": " tai " #". Rivin #-kommentit eivät näy ruudulla.
+
+# Hillnerin kyltin skrolleri (osa hillner). Kyltti alkaa ja loppuu aina tekstiin LOHJAN RAUTA (maalattu kylttiin,
+# ei tässä). Kyltin kirjaimisto on versaali: pienet kirjaimet piirtyvät isoina.
+hillner-eka: "SAA VÄISTYÄ ..."    # ajo-kyltti LOHJAN RAUTAn perään (muistiin mahtuu noin 12 merkkiä)
+hillner-toka: "KUN TILALLE NOUSEE 90-LUVUN IKONI LOHJANTÄHTI, ENIMMÄKSEEN TYHJÄ JO VUODESTA 1991 ... JOTEN TILATAAN MOUKARI PAIKALLE"
+                                  # lähikuva ennen purkua; pidempi teksti vierii nopeammin, liian pitkä kaataa buildin
+
+# Kerrontataulut (mykkäelokuva: musta tausta, koristekehys, teksti kirjoittuu esiin). Pienet kirjaimet piirtyvät
+# Cinzel-kirjasimen kapiteeleina. Osalevy taulu<tunnus> (make part P=taulu1 ...).
+taulut:
+  1: "Lohjan kaupungintalolla..."                                 # musta ruutu ennen ikkunazoomia
+  1b: "...kaupunginjohtaja pelaa juuri julkaistua Sim Lohja -peliä"  # ikkunazoomin jälkeen, ennen kuvaruutua
+  2: "”Tämähän on hyvä idea!”"                                    # kun Hillner on tuhottu pelissä
+  2d: "Kaupunginjohtaja palaa peliinsä"                            # Hillnerin purun jälkeen, ennen graafia
+  2e: "Rakentaminen alkaa"                                         # graafin jälkeen, ennen kuoppaa
+  2f: "37 vuotta myöhemmin on tullut aika siirtää katse Lohjantähdestä torin yli ..."  # vuoden 2026 jälkeen, ennen sokeripalaa
+  2b: "Lohjantähteen muuttaa kovan luokan yrityksiä ja toimintoja"     # Lohjantähti valmis, ennen kylttejä
+  2c: "... jotka kaikkoavat yksi kerrallaan"                         # kuoppa-kylteissä logojen jälkeen, ennen kuin ne lentävät
+  3: "Kyllä Lohja sentään on kaunis"                              # sokeripalan lopussa
+  3b: "...vielä on muutama puutalo jäljellä"                   # greetsien (auringonlasku mustaan) jälkeen, ristikuva kotiin
+
+# Levynvaihtoruudut: Lohjan murretta, ulkopaikkakuntalainen ymmärtää animaatiosta. Vaihtoja tulee niin monta kuin
+# levyjä tarvitaan (tools/disk/kokoa.py), ylimääräiset jäävät käyttämättä.
+# animaatio: kääntö (levy kääntyy) tai vaihto (uusi levy asemaan).
+levynvaihdot:
+  1: {teksti: "KÄÄN TALRIIKKI NY", animaatio: kääntö}          # levy 1 puoli A -> puoli B
+  2: {teksti: "LAIT NY TAAS", animaatio: vaihto}          # levy 2 sisään
+  3: {teksti: "PAS KANS PARAN PÄÄL", animaatio: kääntö}   # levy 2 puoli A -> puoli B
+  4: {teksti: "VIÄL VIIMENE", animaatio: vaihto}          # viimeinen levy sisään
+  5: {teksti: "KÄÄN TALRIIKKI NY", animaatio: kääntö}     # levyn kääntö, jos kääntöjä on enemmän
+
+# Lohjanharjun skrolleri (osa greetsit): henkilöt tässä järjestyksessä, nimien väliin tulee " - ". Kirjaimisto on
+# versaali. Ryhmät ovat logoina kuopan kylteissä ja spriteennätyksessä.
+greets-harju:
+  - mayor
+  - mayday
+  - viznut
+  - sauli + waffle
+  - codise + duet
+  - luutifa/mehu + kompovoittaja ZyL
+  - ciao baleboy of baleware
+  - Pheidian
+  - eeva + reeta
+  - unzky
+
+# Tekijät kodin taivaalle (osa koti), piirtyvät käsialana tässä järjestyksessä.
+tekijat:
+  - dipe
+  - patemathic
+
+# Lopputekstit (osa loppu): rivit vierivät alhaalta ylös. Kirjaimisto on versaali.
+# Rivi on joko "iso: TEKSTI" (iso kirjain), "keski: TEKSTI" (keskikokoinen, otsikot), [RIVI1, RIVI2] (kaksi pientä riviä) tai "TEKSTI" (yksi pieni rivi);
+# "" on tyhjä väli. Tyhjiä välejä lisätään tasaisesti niin, että teksti vierii tasan 1 px kehyksessä.
+lopputekstit:
+  alku:
+    - iso: SIM LOHJA 1989
+    - ""
+    - ""
+    - keski: IHMISET
+    - ["KONSEPTI, OHJAUS, TUOTANTO", DIPE]
+    - ""
+    - [ARTESAANIMUSIIKKI, PATEMATHIC]   # Patemathicin säveltämä biisi Äppelträd (ruotsiksi omenapuu)
+    - ""
+    - ""
+    - keski: TEKOÄLY
+    - ["KOODI, TYÖKALUT, GRAFIIKKA", CLAUDE OPUS 5.5]
+    - [354 PROMPTIA, 48 MILJOONAA TOKENIA]   # ihmisen promptit ja tekoälyn kirjoittamat tokenit 23.-31.10.2026
+    - ""
+    - ""
+  terveiset-otsikko: TERVEISET
+  terveiset:                      # henkilöt kolme riviin sarakkeisiin (pitkät nimet kaksi), sitten muut
+    - aom
+    - deepr
+    - eetu
+    - fragment
+    - fusion
+    - genetic
+    - hapero
+    - iguchi
+    - jakolehm
+    - joonas
+    - kasi
+    - noglin
+    - oo
+    - pg
+    - plokk
+    - salle
+    - slimy devil
+    - visual meri
+    - yoka
+  muut:
+    - "#java2100"
+    - ATK-Lohja
+  tukijat:                        # teksti ennen logoa; logo: tools/gfx/data/ryhmalogot/tukijat.npz (tools/disk/loppu.py)
+    - logo: NUORI LOHJA
+      teksti: TÄMÄ DEMO ON SAANUT HENKISTÄ TUKEA LOHJAN NUORISOTOIMELTA VUOSINA 1998-2001
+  loppu:
+    - [KIITOS, ZOOPARTY 2026]
+  loppukortti: OY LOHJA AI 2026   # viimeinen rivi logojen alla, pysähtyy ruudun keskelle
+
+# MS-DOS-käynnistys koko demon alussa RUNin jälkeen (80 saraketta, PC-kirjasin, ennen musiikkia).
+# Rivi tulostuu sellaisenaan. "|":n jälkeinen osa kirjoitetaan näppäimillä naputuksen kanssa ja perään painetaan
+# Enter ("|" rivin lopussa = pelkkä Enter). "<" pyyhkii edellisen merkin (kirjoitusvirheen korjaus).
+# '[tauko 1.5]' = tauko sekunteina. Kenoviivarivit '...'-lainausmerkeissä. Rivi enintään 79 merkkiä.
+dos:
+  - "[tauko 0.3]"                   # lyhyt tauko ennen Starting MS-DOS -riviä
+  - Starting MS-DOS...
+  - ""
+  - "[tauko 2.5]"
+  - Current date is Mon 10-30-1989
+  - "Enter new date (mm-dd-yy): |"
+  - Current time is  9:41:07.33
+  - "Enter new time: |"
+  - ""
+  - ""
+  - Microsoft(R) MS-DOS(R)  Version 3.30
+  - "             (C)Copyright Microsoft Corp 1981-1987"
+  - ""
+  - 'C:\>|cd peilt<<<lit'
+  - ""
+  - 'C:\PELIT>|dir'
+  - ""
+  - " Volume in drive C is LOHJA"
+  - ' Directory of  C:\PELIT'
+  - ""
+  - ".            <DIR>     10-30-89   9:12a"
+  - "..           <DIR>     10-30-89   9:12a"
+  - "SIMCITY      <DIR>     10-12-89   4:20p"
+  - "PRINCE       <DIR>     10-03-89   1:15p"
+  - "TETRIS       <DIR>      6-06-87  11:02a"
+  - "KINGSQ       <DIR>      5-10-84   2:15p"
+  - "ZORK         <DIR>     11-21-81  10:44a"
+  - "DIGGER       <DIR>      3-02-83   4:05p"
+  - "LARRY        <DIR>      7-01-87   9:51p"
+  - "ELITE        <DIR>      9-14-87   1:33p"
+  - "INDY         <DIR>      8-22-89   3:12p"
+  - "SIMLOHJA     <DIR>     10-30-89   9:38a"
+  - "       12 File(s)   1556480 bytes free"
+  - ""
+  - 'C:\PELIT>|cd simlohja'
+  - ""
+  - 'C:\PELIT\SIMLOHJA>|sim'
+  - "[tauko 1.5]"

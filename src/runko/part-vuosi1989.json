@@ -1,0 +1,64 @@
+{
+ "_doc": "Osavaljas vuosi1989 (make part P=vuosi1989, yleinen osalevy PART 99). Vuosipartti 1989 yksin.",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-vuosi1989.d64",
+ "jatkuva": [
+  "alku"
+ ],
+ "kirjoittaa_edellisen_aikana": [
+  "2400-27ff"
+ ],
+ "_jatkuva": "Alun nimiruudun perään ilman pimennystä: nimiruutu katoaa ja vuosiluvut alkavat iskulle. vuosi_init nimiruudun aikana: ruutu $2400-$27e7 (alku vapauttaa $1a00-$76ff, part-alku.json) ja nollasivu $90-$a1 (nimiruutu ei käytä $02-$a1:tä, hil_prep-sopimus; $a2 on nimiruudun xs).",
+ "vapaana_lopussa": [
+  "8000-bfff",
+  "c000-cfff"
+ ],
+ "_vapaana": "Vuosi ei koske $8000-$cfff:ään (taulut $3000-, build.py DATA_BASE; alun $8000-$bfff on vapaa alun jälkeen), joten taulun 1 TAULU ($a000-) ja kaupungintalo-ikkunan KT2 ja KT0 esiladataan vuoden aikana (latausvara). $8000-$bfff ilmoitetaan, koska jatkuvassa ketjussa kartoitus näkee vapaiksi vain edellisen ajon esilataukset: muuten TAULU ($a000-$b33d) ei mahtuisi, ja vuosi1989 -> taulu1 putoaisi leikkaukseen.",
+ "inc": "build/runko/part-vuosi1989/files.inc",
+ "labels": [
+  "build/runko/part-vuosi1989/payload.labels",
+  "build/vuosi/1989/demo/vuosi.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-vuosi1989/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "      1989",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/vuosi1989_glue.asm",
+   "prg_dir": "build/vuosi/1989/demo",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/vuosi",
+  "demo",
+  "VUOSI=1989"
+ ]
+}

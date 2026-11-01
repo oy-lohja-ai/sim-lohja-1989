@@ -1,0 +1,60 @@
+{
+ "_doc": "Osavaljas taulu1b (make part P=taulu1b, yleinen osalevy PART 99): mykkäelokuvan kerrontataulu 1b, teksti tekstit.yaml:n taulusta 1b (src/proto/taulu).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-taulu1b.d64",
+ "jatkuva": [
+  "kaupungintalo-ikkuna"
+ ],
+ "_jatkuva": "Kaupungintalo-ikkunan perään ilman 30 kehyksen mustaa: taulu_init ei tee mitään ikkunan aikana, ja taulu_go kopioi taulun $6000:aan (ikkunan huone näkyy siellä loppuun asti) kuva mustana noin 3 kehystä rungon IRQ:n soittaessa.",
+ "vapaana_lopussa": [
+  "8000-bfff"
+ ],
+ "_vapaana": "Merkkitila $6000-$7fff (src/proto/taulu MERKKI_1b): tiedosto ladataan $a000:aan ja taulu_go kopioi sen, ja kaupungintalo-ikkuna on sauman jälkeen ohi, joten $8000-$bfff on vapaa kaupungintalon alun (KT22 $8000-$bfca) esilataukselle. Koko alue ilmoitetaan, koska kartoitus ei näe $8000-$9fff:ää vapaana, ja ilman sitä taulu1b -> kaupungintalo putoaisi leikkaukseen.",
+ "inc": "build/runko/part-taulu1b/files.inc",
+ "labels": [
+  "build/runko/part-taulu1b/payload.labels",
+  "build/taulu1b/taulu.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-taulu1b/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "    TAULU 1B",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "build/taulu1b/taulu1b_glue.asm",
+   "prg_dir": "build/taulu1b",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/taulu",
+  "demo",
+  "N=1b"
+ ]
+}

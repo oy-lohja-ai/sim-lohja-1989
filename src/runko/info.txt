@@ -1,0 +1,82 @@
+Sim Lohja 1989
+Oy Lohja AI, Zooparty 2026 (demo)
+
+Tekijät
+dipe: ohjaus
+Patemathic: musiikki "Appeltrad"
+
+PAL C64 ja 1541, ei lisälaitteita.
+LOAD"*",8,1 ja RUN (puoli A).
+Kesto noin 5 min 15 s levynvaihtoineen.
+SID: tehty 8580:lla, soi myös 6581:llä.
+
+Levynvaihto: 1 levy, 2 puolta. Kun
+ruudulla lukee KÄÄN SI LEVY (Lohjan
+murretta: käännä levy), käännä levy
+puolelle B. Demo jatkaa itse, kun puoli
+B löytyy. Näppäimiä ei tarvita.
+
+Tekoälyn käyttö (Zoopartyn sääntö:
+AI ilmoitetaan)
+Demon tekivät tekoälyagentit ihmisen
+ohjauksessa.
+- Koodi: kaikki 6510-koodi (efektit,
+  runko, levynvaihto, pakkaaja ja
+  purkaja) ja työkalut ovat Anthropicin
+  Claude-agenttien kirjoittamia.
+  Efektit lasketaan 6510:llä
+  reaaliajassa, ei esirenderöityjä
+  kuvasarjoja.
+- Grafiikka: osa kuvista on aloitettu
+  paikallisella kuvamallilla (Z-Image-
+  Turbo omalla koneella, yli 200
+  generointia lokissa promptin ja
+  siemenen kanssa). Agentit muunsivat
+  ne C64:n paletille ja resoluutiolle
+  ja korjasivat pikseli pikseliltä.
+  Osan grafiikasta agentit piirsivät
+  suoraan pikseleinä tai koodilla.
+  Kartat perustuvat Lohjan todelliseen
+  geometriaan.
+- Tutkimus: Lohjan historian,
+  rakennusten ja C64-tekniikan
+  taustatyön tekivät agentit
+  verkkolähteistä.
+- Musiikki: ihmisen säveltämä. Agentit
+  integroivat soittimen ja pidensivät
+  sovitusta mykistämällä ja toistamalla
+  osia.
+Ihminen (dipe) ohjasi: idea,
+käsikirjoitus, kohtausten valinta ja
+ajoitus sekä jokaisen ruudun
+hyväksyntä.
+
+Kiitokset
+Loader by Krill
+Soitin: Blackbird by lft
+Pakkaus: ZX0-muoto (Einar Saukas), dali-
+variantti (Bitbreaker); pakkaaja ja
+purkaja kirjoitettu tähän demoon.
+
+English
+AI disclosure: made by AI agents
+directed by a human. All 6510 code and
+tools were written by Claude agents
+(Anthropic); all effects run in real
+time on the 6510, no prerendered frame
+sequences. Some images started from a
+local image model (Z-Image-Turbo, own
+machine, over 200 generations logged
+with prompt and seed), converted to the
+C64 palette and fixed pixel by pixel by
+the agents; other graphics were drawn
+directly as pixels or in code. Research
+from web sources by the agents. Music
+composed by a human: "Appeltrad" by
+Patemathic, player Blackbird by lft;
+arrangement extended by the agents.
+Director dipe: idea, script, scene
+choice and timing, approved every
+screen. Disk flip: when the screen says
+KAAN SI LEVY, turn to side B; the demo
+continues by itself. Loader by Krill.

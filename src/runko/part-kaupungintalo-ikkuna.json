@@ -1,0 +1,62 @@
+{
+ "_doc": "Osavaljas kaupungintalo-ikkuna (make part P=kaupungintalo-ikkuna, yleinen osalevy PART 99): kamera-ajo patsaalta ikkunan läpi huoneeseen ja johtaja pelaa koneella, VARIANT=ikkuna. Kehykset 0-359: kamera-ajo 0-179 (1,33 kertaa nopeammin), huone 180-359.",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-kaupungintalo-ikkuna.d64",
+ "jatkuva": [
+  "taulu1"
+ ],
+ "_jatkuva": "Taulun 1 perään ilman pimennystä: taulu häivyttää itsensä mustaksi ja kamera-ajo alkaa iskulle. kt_init (nollasivu $30-$8f, omat taulut ja palkkien lohkot I/O:n alle $d000-) taulun aikana; taulun IRQ asettaa $01:n itse (kam_gen $34).",
+ "vapaana_lopussa": [
+  "9800-bfff",
+  "e000-ff3f"
+ ],
+ "vapaana_kehyksesta": "s.KAM_LOPPU + 2",
+ "_vapaana": "Kamera-ajo päättyy kehyksessä KAM_LOPPU (kam_vaihto: huone VIC-pankissa 1, $1a00-$7fef ja kädet $9400-$97ff), joten kamera-ajon kaistat $9800-, koosteen solut $bf40- sekä koosteen bittikartta ja etualan taulut $e000-$ffcb (KT6, pankki 3) ovat vapaita: kokoa.py esilataa sinne seuraavan taulun ($a000-) ja kaksi edellä kaupungintalon KT3:n ($e000-, jatkuva siirtymä taulusta 1b). ($ff40- etualan taulut ja vektorit eivät.)",
+ "inc": "build/runko/part-kaupungintalo-ikkuna/files.inc",
+ "labels": [
+  "build/runko/part-kaupungintalo-ikkuna/payload.labels",
+  "build/kaupungintalo-ikkuna/demo/kt.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-kaupungintalo-ikkuna/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "KT: IKKUNA",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/kaupungintalo-ikkuna_glue.asm",
+   "prg_dir": "build/kaupungintalo-ikkuna/demo",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/kaupungintalo",
+  "demo",
+  "VARIANT=ikkuna"
+ ]
+}

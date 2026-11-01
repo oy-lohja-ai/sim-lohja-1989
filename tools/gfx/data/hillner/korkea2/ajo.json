@@ -1,0 +1,261 @@
+{
+ "korkeus": 384,
+ "vieritys": 240,
+ "loppurajaus_rivit": [
+  240,
+  383
+ ],
+ "SKY_T": 183,
+ "horisontti_ruudulla": 66,
+ "kamera": {
+  "x_z": [
+   25.3,
+   14.7
+  ],
+  "katse_x_z": [
+   14.5,
+   0.0
+  ],
+  "silma_m": [
+   18.5,
+   3.5
+  ],
+  "polttovali": 357.9,
+  "huom": "nosturi laskee silmää vierityksen tahdissa julkisivun syvyydellä: talo oikeissa mittasuhteissa (ei venytystä); kaukainen taivas pysyy ruudulla paikallaan"
+ },
+ "kyltti": {
+  "corners": [
+   [
+    2.9,
+    268.1
+   ],
+   [
+    127.7,
+    301.5
+   ],
+   [
+    127.7,
+    321.6
+   ],
+   [
+    2.9,
+    282.5
+   ]
+  ],
+  "text_corners": [
+   [
+    4.0,
+    270.9
+   ],
+   [
+    124.4,
+    304.2
+   ],
+   [
+    124.4,
+    317.3
+   ],
+   [
+    4.0,
+    280.5
+   ]
+  ],
+  "kaista_x": [
+   4,
+   127
+  ],
+  "kaista_yla": {
+   "a": 271.49,
+   "b": 0.2677,
+   "c": 4
+  },
+  "kaista_ala": {
+   "a": 283.81,
+   "b": 0.3118,
+   "c": 4
+  },
+  "loppurajaus": {
+   "kaista_yla": {
+    "a": 31.49,
+    "b": 0.2677,
+    "c": 4
+   },
+   "kaista_ala": {
+    "a": 43.81,
+    "b": 0.3118,
+    "c": 4
+   },
+   "kaava": "y = a + b (x - c), kaistan ensimmäinen ja viimeinen rivi reunalistojen välissä"
+  },
+  "letter_rows_left": 9.5,
+  "letter_rows_right": 13.1,
+  "board": 8,
+  "board_stripes": 2,
+  "letters": 1,
+  "border": [
+   10,
+   9
+  ],
+  "note": "korkea: oranssi markiisikaista (8, raidat 2), yläreunassa 10 ja alareunassa 9, ei tekstiä (image_full); image_full_text = maalattu LOHJAN RAUTA vertailuun"
+ },
+ "taivas_ruutu": [
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  14,
+  15,
+  14,
+  15,
+  14,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  15,
+  1,
+  15,
+  1,
+  15,
+  1,
+  1,
+  1,
+  1,
+  15,
+  15,
+  5,
+  15,
+  5,
+  15,
+  5,
+  5,
+  5,
+  5,
+  5,
+  5,
+  12,
+  5,
+  12,
+  5,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  11,
+  12,
+  11,
+  12,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  11,
+  9,
+  11,
+  9,
+  11,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9,
+  9
+ ],
+ "taivas_ruutu_huom": "$D021 ruudun riveittäin 0-143 (horisontti paikallaan): taivas 14 -> 15 -> 1 horisonttia kohti 4 rivin vuorotteluin, horisontin alla kaupungin ja latvusten sävyt; näkyy kerros.npy:n 255-pikseleissä",
+ "savupiiput": [
+  [
+   79.0,
+   105.5
+  ]
+ ],
+ "savupiiput_huom": "piipun suu [x MC-px, kuvan rivi]",
+ "paaskyset": [
+  30,
+  42,
+  54
+ ],
+ "paaskyset_huom": "pääskysten lentorivit (kuvan rivit), taivaalla antennien yläpuolella"
+}

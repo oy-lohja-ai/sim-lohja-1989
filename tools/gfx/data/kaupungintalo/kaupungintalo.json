@@ -1,0 +1,584 @@
+{
+ "huone": {
+  "tausta": 11,
+  "ruutu": {
+   "solut": [
+    10,
+    17,
+    11,
+    19
+   ],
+   "x0": 41,
+   "leveys": 25,
+   "nauha_korkeus": 158,
+   "kulmat": [
+    [
+     41.5,
+     99.5
+    ],
+    [
+     62.625,
+     94.75
+    ],
+    [
+     65.625,
+     136.25
+    ],
+    [
+     44.625,
+     144.5
+    ]
+   ],
+   "ylareuna": [
+    99.5,
+    99.38757396449704,
+    99.16272189349112,
+    98.93786982248521,
+    98.71301775147928,
+    98.48816568047337,
+    98.26331360946746,
+    98.03846153846153,
+    97.81360946745562,
+    97.58875739644971,
+    97.36390532544378,
+    97.13905325443787,
+    96.91420118343196,
+    96.68934911242603,
+    96.46449704142012,
+    96.2396449704142,
+    96.01479289940828,
+    95.78994082840237,
+    95.56508875739645,
+    95.34023668639053,
+    95.11538461538461,
+    94.8905325443787,
+    94.75,
+    94.75,
+    94.75
+   ]
+  },
+  "ruutu_varit": [
+   11,
+   13,
+   15,
+   1
+  ],
+  "paat": {
+   "solut": [
+    20,
+    31,
+    3,
+    14
+   ],
+   "asennot": [
+    [
+     0.0,
+     0
+    ],
+    [
+     3.0,
+     -6
+    ],
+    [
+     6.0,
+     -12
+    ],
+    [
+     -3.0,
+     4
+    ],
+    [
+     4.5,
+     -20
+    ],
+    [
+     8.0,
+     -24
+    ]
+   ],
+   "tavua_asento": 1210
+  }
+ },
+ "peli": {
+  "rivit": 38,
+  "globaalit": [
+   15,
+   13,
+   11
+  ],
+  "vaiheet": {
+   "P1": {
+    "rivit": [
+     0,
+     25
+    ],
+    "merkkeja_ennen": 350,
+    "merkkeja": 256,
+    "osat": [
+     "valikko",
+     "valinta0",
+     "valinta1",
+     "valinta2",
+     "valinta3",
+     "valinta4",
+     "valinta5",
+     "valinta6",
+     "rivi0",
+     "rivi1",
+     "rivi2",
+     "rivi3",
+     "rivi4",
+     "rivi5",
+     "rivi6"
+    ]
+   },
+   "P2": {
+    "rivit": [
+     0,
+     38
+    ],
+    "merkkeja_ennen": 447,
+    "merkkeja": 256,
+    "osat": []
+   },
+   "P3": {
+    "rivit": [
+     13,
+     38
+    ],
+    "merkkeja_ennen": 476,
+    "merkkeja": 256,
+    "osat": [
+     "tyokalut0",
+     "tyokalut3",
+     "tila_purku",
+     "neuvo",
+     "ohita_pohjassa",
+     "neuvo0",
+     "neuvo1",
+     "neuvo2"
+    ]
+   },
+   "P4": {
+    "rivit": [
+     13,
+     38
+    ],
+    "merkkeja_ennen": 414,
+    "merkkeja": 256,
+    "osat": [
+     "tyokalut",
+     "tila_matkalla"
+    ]
+   },
+   "A": {
+    "rivit": [
+     0,
+     0
+    ],
+    "merkkeja_ennen": 73,
+    "merkkeja": 73,
+    "osat": [
+     "valikkorivi",
+     "valikkorivi_k",
+     "otsikko0",
+     "otsikko1",
+     "valikko_yla"
+    ]
+   }
+  },
+  "ui": {
+   "valikko": {
+    "rivi": 2,
+    "sarake": 21,
+    "korkeus": 8,
+    "leveys": 19,
+    "kohta": 0,
+    "vaihe": "P1"
+   },
+   "valinta0": {
+    "rivi": 2,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 304,
+    "vaihe": "P1"
+   },
+   "valinta1": {
+    "rivi": 3,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 338,
+    "vaihe": "P1"
+   },
+   "valinta2": {
+    "rivi": 4,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 372,
+    "vaihe": "P1"
+   },
+   "valinta3": {
+    "rivi": 5,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 406,
+    "vaihe": "P1"
+   },
+   "valinta4": {
+    "rivi": 6,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 440,
+    "vaihe": "P1"
+   },
+   "valinta5": {
+    "rivi": 7,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 474,
+    "vaihe": "P1"
+   },
+   "valinta6": {
+    "rivi": 8,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 508,
+    "vaihe": "P1"
+   },
+   "rivi0": {
+    "rivi": 2,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 542,
+    "vaihe": "P1"
+   },
+   "rivi1": {
+    "rivi": 3,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 576,
+    "vaihe": "P1"
+   },
+   "rivi2": {
+    "rivi": 4,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 610,
+    "vaihe": "P1"
+   },
+   "rivi3": {
+    "rivi": 5,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 644,
+    "vaihe": "P1"
+   },
+   "rivi4": {
+    "rivi": 6,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 678,
+    "vaihe": "P1"
+   },
+   "rivi5": {
+    "rivi": 7,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 712,
+    "vaihe": "P1"
+   },
+   "rivi6": {
+    "rivi": 8,
+    "sarake": 22,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 746,
+    "vaihe": "P1"
+   },
+   "tyokalut0": {
+    "rivi": 2,
+    "sarake": 0,
+    "korkeus": 9,
+    "leveys": 4,
+    "kohta": 780,
+    "vaihe": "P3"
+   },
+   "tyokalut3": {
+    "rivi": 2,
+    "sarake": 0,
+    "korkeus": 9,
+    "leveys": 4,
+    "kohta": 852,
+    "vaihe": "P3"
+   },
+   "tila_purku": {
+    "rivi": 24,
+    "sarake": 0,
+    "korkeus": 1,
+    "leveys": 40,
+    "kohta": 924,
+    "vaihe": "P3"
+   },
+   "neuvo": {
+    "rivi": 6,
+    "sarake": 1,
+    "korkeus": 12,
+    "leveys": 38,
+    "kohta": 1004,
+    "vaihe": "P3"
+   },
+   "ohita_pohjassa": {
+    "rivi": 15,
+    "sarake": 24,
+    "korkeus": 1,
+    "leveys": 7,
+    "kohta": 1916,
+    "vaihe": "P3"
+   },
+   "neuvo0": {
+    "rivi": 8,
+    "sarake": 10,
+    "korkeus": 1,
+    "leveys": 17,
+    "kohta": 1930,
+    "vaihe": "P3"
+   },
+   "neuvo1": {
+    "rivi": 10,
+    "sarake": 10,
+    "korkeus": 1,
+    "leveys": 25,
+    "kohta": 1964,
+    "vaihe": "P3"
+   },
+   "neuvo2": {
+    "rivi": 12,
+    "sarake": 10,
+    "korkeus": 1,
+    "leveys": 18,
+    "kohta": 2014,
+    "vaihe": "P3"
+   },
+   "tyokalut": {
+    "rivi": 2,
+    "sarake": 0,
+    "korkeus": 9,
+    "leveys": 4,
+    "kohta": 2050,
+    "vaihe": "P4"
+   },
+   "tila_matkalla": {
+    "rivi": 24,
+    "sarake": 0,
+    "korkeus": 1,
+    "leveys": 40,
+    "kohta": 2122,
+    "vaihe": "P4"
+   },
+   "valikkorivi": {
+    "rivi": 0,
+    "sarake": 0,
+    "korkeus": 1,
+    "leveys": 40,
+    "kohta": 2202,
+    "vaihe": "A"
+   },
+   "valikkorivi_k": {
+    "rivi": 0,
+    "sarake": 0,
+    "korkeus": 1,
+    "leveys": 40,
+    "kohta": 2282,
+    "vaihe": "A"
+   },
+   "otsikko0": {
+    "rivi": 1,
+    "sarake": 0,
+    "korkeus": 1,
+    "leveys": 40,
+    "kohta": 2362,
+    "vaihe": "A"
+   },
+   "otsikko1": {
+    "rivi": 1,
+    "sarake": 0,
+    "korkeus": 1,
+    "leveys": 40,
+    "kohta": 2442,
+    "vaihe": "A"
+   },
+   "valikko_yla": {
+    "rivi": 1,
+    "sarake": 21,
+    "korkeus": 1,
+    "leveys": 19,
+    "kohta": 2522,
+    "vaihe": "A"
+   }
+  },
+  "hillner_solut": [
+   [
+    25,
+    17
+   ],
+   [
+    25,
+    18
+   ],
+   [
+    25,
+    19
+   ],
+   [
+    25,
+    20
+   ],
+   [
+    26,
+    17
+   ],
+   [
+    26,
+    18
+   ],
+   [
+    26,
+    21
+   ],
+   [
+    26,
+    22
+   ],
+   [
+    27,
+    19
+   ]
+  ],
+  "purkajan_reitti": [
+   [
+    4,
+    152
+   ],
+   [
+    60,
+    208
+   ]
+  ],
+  "hillner_keski": [
+   80,
+   212
+  ],
+  "valikko_x": 186,
+  "valikko_sarake": 21,
+  "spritet": [
+   "johtaja_taytto",
+   "johtaja_reuna",
+   "timantti0",
+   "timantti1",
+   "purkaja0a",
+   "purkaja0b",
+   "purkaja1a",
+   "purkaja1b",
+   "kaista"
+  ]
+ },
+ "naytto": {
+  "tausta": 11,
+  "paljastus_kehyksia": 60,
+  "paljastus_soluja": 1000,
+  "paljastus_loppu": [
+   33,
+   66,
+   98,
+   132,
+   167,
+   203,
+   240,
+   277,
+   283,
+   291,
+   300,
+   310,
+   321,
+   330,
+   342,
+   353,
+   366,
+   381,
+   394,
+   407,
+   427,
+   457,
+   483,
+   501,
+   520,
+   537,
+   557,
+   581,
+   598,
+   617,
+   641,
+   656,
+   695,
+   743,
+   751,
+   775,
+   820,
+   828,
+   832,
+   876,
+   906,
+   912,
+   924,
+   960,
+   970,
+   1000,
+   1000,
+   1000,
+   1000,
+   1000,
+   1000,
+   1000,
+   1000,
+   1000,
+   1000,
+   1000,
+   1000,
+   1000,
+   1000,
+   1000
+  ],
+  "kulmat": [
+   [
+    40.75,
+    21.5
+   ],
+   [
+    112.0,
+    19.5
+   ],
+   [
+    117.0,
+    121.75
+   ],
+   [
+    46.0,
+    134.5
+   ]
+  ]
+ },
+ "lahde": "paikallinen kuvamalli (Z-Image-Turbo), muunnettu C64:lle"
+}

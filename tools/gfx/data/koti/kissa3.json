@@ -1,0 +1,245 @@
+{
+ "kangas": [
+  98,
+  160
+ ],
+ "x": 38,
+ "leveys": 36,
+ "korkeus": 98,
+ "ylarivi": 40,
+ "rata": "ylärivi ikkunassa = 40 + 5.644 * s (s = vieritys 0..120)",
+ "kerroin": 5.644,
+ "tekniikka": "MC-spritet ilman laajennusta, solut 12 x 21 porrastettuina",
+ "roolit": {
+  "0": "$D025 = 0",
+  "1": "$D026 = 1",
+  "muu": "solun oma väri"
+ },
+ "solujako": {
+  "0": [
+   -14,
+   7,
+   28,
+   49,
+   70,
+   91
+  ],
+  "1": [
+   -7,
+   14,
+   35,
+   56,
+   77,
+   98
+  ],
+  "2": [
+   0,
+   21,
+   42,
+   63,
+   84
+  ]
+ },
+ "solut": [
+  {
+   "sarake": 0,
+   "ylarivi": -14,
+   "oma": 15
+  },
+  {
+   "sarake": 0,
+   "ylarivi": 7,
+   "oma": 13
+  },
+  {
+   "sarake": 0,
+   "ylarivi": 28,
+   "oma": 10
+  },
+  {
+   "sarake": 0,
+   "ylarivi": 49,
+   "oma": 15
+  },
+  {
+   "sarake": 0,
+   "ylarivi": 70,
+   "oma": 15
+  },
+  {
+   "sarake": 1,
+   "ylarivi": -7,
+   "oma": 15
+  },
+  {
+   "sarake": 1,
+   "ylarivi": 14,
+   "oma": 15
+  },
+  {
+   "sarake": 1,
+   "ylarivi": 35,
+   "oma": 15
+  },
+  {
+   "sarake": 1,
+   "ylarivi": 56,
+   "oma": 15
+  },
+  {
+   "sarake": 1,
+   "ylarivi": 77,
+   "oma": 15
+  },
+  {
+   "sarake": 2,
+   "ylarivi": 21,
+   "oma": 15
+  },
+  {
+   "sarake": 2,
+   "ylarivi": 42,
+   "oma": 15
+  },
+  {
+   "sarake": 2,
+   "ylarivi": 63,
+   "oma": 15
+  },
+  {
+   "sarake": 2,
+   "ylarivi": 84,
+   "oma": 15
+  }
+ ],
+ "lohkoja": {
+  "perus": 14,
+  "muunnelmat": 5,
+  "yhteensa": 19
+ },
+ "kehykset": [
+  {
+   "indeksi": 0,
+   "nimi": "perus",
+   "solut": []
+  },
+  {
+   "indeksi": 1,
+   "nimi": "korva",
+   "solut": [
+    {
+     "sarake": 0,
+     "ylarivi": -14,
+     "oma": null,
+     "tyhja": true
+    },
+    {
+     "sarake": 0,
+     "ylarivi": 7,
+     "oma": 13
+    }
+   ]
+  },
+  {
+   "indeksi": 2,
+   "nimi": "silmat_kiinni",
+   "solut": [
+    {
+     "sarake": 0,
+     "ylarivi": 7,
+     "oma": 13
+    }
+   ]
+  },
+  {
+   "indeksi": 3,
+   "nimi": "katse_kuistille",
+   "solut": [
+    {
+     "sarake": 0,
+     "ylarivi": 7,
+     "oma": 13
+    }
+   ]
+  },
+  {
+   "indeksi": 4,
+   "nimi": "hanta_maassa",
+   "solut": [
+    {
+     "sarake": 1,
+     "ylarivi": 77,
+     "oma": 15
+    }
+   ]
+  },
+  {
+   "indeksi": 5,
+   "nimi": "hanta_koukku",
+   "solut": [
+    {
+     "sarake": 1,
+     "ylarivi": 77,
+     "oma": 15
+    }
+   ]
+  }
+ ],
+ "rytmi": {
+  "hanta": {
+   "jarjestys": [
+    "perus",
+    "hanta_maassa",
+    "perus",
+    "hanta_koukku"
+   ],
+   "kesto": [
+    14,
+    22,
+    10,
+    18
+   ],
+   "huom": "hidas heilautus noin 1,3 s:n kierrolla, ei biisin tahdissa"
+  },
+  "korva": {
+   "jarjestys": [
+    "korva",
+    "perus",
+    "korva"
+   ],
+   "kesto": [
+    3,
+    3,
+    3
+   ],
+   "vali": [
+    150,
+    260
+   ],
+   "huom": "nopea värähdys satunnaisin välein"
+  },
+  "silmat": {
+   "jarjestys": [
+    "silmat_kiinni"
+   ],
+   "kesto": [
+    12
+   ],
+   "vali": [
+    180,
+    320
+   ],
+   "huom": "hidas silmänisku"
+  },
+  "katse": {
+   "jarjestys": [
+    "katse_kuistille"
+   ],
+   "kesto": [
+    70
+   ],
+   "huom": "kerran kohtauksen keskellä"
+  }
+ },
+ "lahde": "käsin piirretty ruudukko"
+}

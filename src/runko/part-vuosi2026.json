@@ -1,0 +1,67 @@
+{
+ "_doc": "Osavaljas vuosi2026 (make part P=vuosi2026, yleinen osalevy PART 99). Vuosipartti 2026 yksin.",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-vuosi2026.d64",
+ "siirtyma": {
+  "efekti": "uusivuosi",
+  "edellinen": "spritet"
+ },
+ "_siirtyma": "Sprite-ennätyksen jälkeen ilotulitus jatkuu mustalla taivaalla ja hiipuu, kun vuoden alku latautuu; taulut $4000- (ilotulitus $c400-).",
+ "iskuvara_pakota": 30,
+ "_iskuvara_pakota": "Spritetin perässä vuoden alku (16 lohkoa) latautuu ilotulituksen aikana: 300 rpm:llä ladattu +88 ja alku 120 (vara 33), 305 rpm:llä ladattu +87 ja alku 90 (vara 4), joten alku hyppisi 90:n ja 120:n välillä. Alku pakotetaan iskulle, jota ennen lataukset ovat valmiit vähintään 30 kehystä (kokoa.py forced_beats): väli 120 kehystä, ilotulituksen lista 2 täyttää sen.",
+ "vapaana_lopussa": [
+  "5000-bfff"
+ ],
+ "jatkuva": [
+  "kuoppa-kyltit"
+ ],
+ "jatkuva_alustus": "vuosi_sauma",
+ "_jatkuva": "Kuoppa-kylttien perään ilman 30 kehyksen mustaa. Kyltit käyttävät $1a00-$5e6a viimeiseen kehykseensä asti (ydin, viimeinen logo lentää), joten VUOSI1-3 esiladataan kylttien aikana ja vuosi_sauma (vuosi_init rungon IRQ:n alla ja kehysten kiinniotto kelloon) ajetaan sauman jälkeen: vuoden omat ensimmäiset kehykset ovat mustia.",
+ "inc": "build/runko/part-vuosi2026/files.inc",
+ "labels": [
+  "build/runko/part-vuosi2026/payload.labels",
+  "build/vuosi/2026/demo/vuosi.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-vuosi2026/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "      2026",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/vuosi2026_glue.asm",
+   "prg_dir": "build/vuosi/2026/demo",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/vuosi",
+  "demo",
+  "VUOSI=2026"
+ ]
+}

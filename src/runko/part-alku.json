@@ -1,0 +1,51 @@
+{
+ "_doc": "Osavaljas alku (make part P=alku). Oy Lohja AI -emblem yksin (partti 1).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-alku.d64",
+ "vapaana_lopussa": [
+  "1a00-76ff",
+  "c000-cfff",
+  "e000-faff"
+ ],
+ "inc": "build/runko/part-alku/files.inc",
+ "labels": [
+  "build/runko/part-alku/payload.labels",
+  "build/logo/demo/alku.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-alku/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "    ALKU",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/alku_glue.asm",
+   "prg_dir": "build/logo/demo",
+   "pack": true
+  }
+ ]
+}

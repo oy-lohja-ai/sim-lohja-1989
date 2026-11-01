@@ -1,0 +1,205 @@
+{
+ "muoto": "ilta_v4_maski.npy (144 x 160 MC-px): 1 = %01 (merkkirivin näyttömuistiväri), 0 = %00 (rivin $D021); ikkunan rivit kuvassa p = 0, merkkirivit ikkunan riveiltä 3 + 8k",
+ "kaistat": [
+  {
+   "rivit": [
+    0,
+    11
+   ],
+   "d021_ilta": 6,
+   "c01_ilta": 6,
+   "d021_paiva": 14,
+   "c01_paiva": 14,
+   "siirtyma_riveja": 0
+  },
+  {
+   "rivit": [
+    11,
+    19
+   ],
+   "d021_ilta": 6,
+   "c01_ilta": 4,
+   "d021_paiva": 14,
+   "c01_paiva": 14,
+   "siirtyma_riveja": 6
+  },
+  {
+   "rivit": [
+    19,
+    27
+   ],
+   "d021_ilta": 4,
+   "c01_ilta": 8,
+   "d021_paiva": 14,
+   "c01_paiva": 15,
+   "siirtyma_riveja": 6
+  },
+  {
+   "rivit": [
+    27,
+    35
+   ],
+   "d021_ilta": 8,
+   "c01_ilta": 10,
+   "d021_paiva": 15,
+   "c01_paiva": 15,
+   "siirtyma_riveja": 6
+  },
+  {
+   "rivit": [
+    35,
+    38
+   ],
+   "d021_ilta": 10,
+   "c01_ilta": 7,
+   "d021_paiva": 15,
+   "c01_paiva": 1,
+   "siirtyma_riveja": 3
+  },
+  {
+   "rivit": [
+    38,
+    40
+   ],
+   "d021_ilta": 7,
+   "c01_ilta": 7,
+   "d021_paiva": 1,
+   "c01_paiva": 1,
+   "siirtyma_riveja": 0
+  },
+  {
+   "rivit": [
+    40,
+    43
+   ],
+   "d021_ilta": 9,
+   "c01_ilta": 9,
+   "d021_paiva": 12,
+   "c01_paiva": 12,
+   "siirtyma_riveja": 0
+  },
+  {
+   "rivit": [
+    43,
+    51
+   ],
+   "d021_ilta": 10,
+   "c01_ilta": 8,
+   "d021_paiva": 15,
+   "c01_paiva": 15,
+   "siirtyma_riveja": 6
+  },
+  {
+   "rivit": [
+    51,
+    59
+   ],
+   "d021_ilta": 8,
+   "c01_ilta": 2,
+   "d021_paiva": 15,
+   "c01_paiva": 14,
+   "siirtyma_riveja": 6
+  },
+  {
+   "rivit": [
+    59,
+    67
+   ],
+   "d021_ilta": 2,
+   "c01_ilta": 4,
+   "d021_paiva": 14,
+   "c01_paiva": 14,
+   "siirtyma_riveja": 6
+  },
+  {
+   "rivit": [
+    67,
+    75
+   ],
+   "d021_ilta": 4,
+   "c01_ilta": 6,
+   "d021_paiva": 14,
+   "c01_paiva": 11,
+   "siirtyma_riveja": 6
+  },
+  {
+   "rivit": [
+    75,
+    83
+   ],
+   "d021_ilta": 6,
+   "c01_ilta": 6,
+   "d021_paiva": 11,
+   "c01_paiva": 11,
+   "siirtyma_riveja": 0
+  },
+  {
+   "rivit": [
+    83,
+    91
+   ],
+   "d021_ilta": 6,
+   "c01_ilta": 4,
+   "d021_paiva": 11,
+   "c01_paiva": 11,
+   "siirtyma_riveja": 4
+  },
+  {
+   "rivit": [
+    91,
+    99
+   ],
+   "d021_ilta": 4,
+   "c01_ilta": 6,
+   "d021_paiva": 11,
+   "c01_paiva": 11,
+   "siirtyma_riveja": 6
+  },
+  {
+   "rivit": [
+    99,
+    107
+   ],
+   "d021_ilta": 6,
+   "c01_ilta": 6,
+   "d021_paiva": 11,
+   "c01_paiva": 11,
+   "siirtyma_riveja": 0
+  },
+  {
+   "rivit": [
+    107,
+    115
+   ],
+   "d021_ilta": 6,
+   "c01_ilta": 9,
+   "d021_paiva": 11,
+   "c01_paiva": 11,
+   "siirtyma_riveja": 6
+  },
+  {
+   "rivit": [
+    115,
+    123
+   ],
+   "d021_ilta": 9,
+   "c01_ilta": 0,
+   "d021_paiva": 11,
+   "c01_paiva": 0,
+   "siirtyma_riveja": 6
+  },
+  {
+   "rivit": [
+    123,
+    144
+   ],
+   "d021_ilta": 0,
+   "c01_ilta": 0,
+   "d021_paiva": 0,
+   "c01_paiva": 0,
+   "siirtyma_riveja": 0
+  }
+ ],
+ "huom": "$D021 vaihtuu vain kaistojen rajoilla; tekijöiden käsiala %10:ksi (musta), koska %01 on liukuvärin; auringon heijastus REFL-spriteinä kuten nyt",
+ "v4": "rivit 0-74 tavulleen kuten v3; järven alaosa (75-143) heijastuskaistana ja rantaan tummuvana"
+}

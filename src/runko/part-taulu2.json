@@ -1,0 +1,63 @@
+{
+ "_doc": "Osavaljas taulu2 (make part P=taulu2, yleinen osalevy PART 99): mykkäelokuvan kerrontataulu 2, teksti tekstit.yaml:n taulusta 2 (src/proto/taulu).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-taulu2.d64",
+ "jatkuva": [
+  "kaupungintalo"
+ ],
+ "kirjoittaa_edellisen_aikana": [
+  "8800-8fff"
+ ],
+ "_jatkuva": "Kaupungintalon pelin perään ilman pimennystä: taulu valottuu pelin viimeisen kuvan jälkeen iskulle. taulu_init kirjoittaa pelin aikana spritet $8800- ja ruudun $8c00- (peli $2000-$87cf, part-kaupungintalo.json vapaana_lopussa) ja nollasivun $f0-.",
+ "vapaana_lopussa": [
+  "1a00-87ff"
+ ],
+ "_vapaana": "Taulu käyttää pankin 2 ($8800-, ruutu $8c00, koodi $9800, bittikartta $a000) ja nollasivun $f0-; kaupungintalo on taulun alkaessa ohi, joten $1a00-$87ff on vapaa: Hillnerin taulu KUG esiladataan sinne CRANE1:n ($1a00-$746f) perään (latausvara iskuun).",
+ "inc": "build/runko/part-taulu2/files.inc",
+ "labels": [
+  "build/runko/part-taulu2/payload.labels",
+  "build/taulu2/taulu.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-taulu2/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "    TAULU 2",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "build/taulu2/taulu2_glue.asm",
+   "prg_dir": "build/taulu2",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/taulu",
+  "demo",
+  "N=2"
+ ]
+}

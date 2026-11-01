@@ -1,0 +1,30 @@
+{
+ "_doc": "Demon osat esitysjärjestyksessä (tools/disk/kokoa.py). Osan osalevy on src/runko/part-<osalevy>.json; valinnat: osa, jonka osalevy on eri niminen (spriteennätyksen muunnelma). Kompoversio RC10.",
+ "jarjestys": [
+  "alku",
+  "vuosi1989",
+  "taulu1",
+  "kaupungintalo-ikkuna",
+  "taulu1b",
+  "kaupungintalo",
+  "taulu2",
+  "hillner",
+  "taulu2d",
+  "graafi",
+  "taulu2e",
+  "kuoppa",
+  "taulu2b",
+  "kuoppa-kyltit",
+  "spritet",
+  "vuosi2026",
+  "taulu2f",
+  "sokeripala",
+  "greetsit",
+  "taulu3b",
+  "koti",
+  "loppu"
+ ],
+ "valinnat": {
+  "spritet": "spritet-lentavat"
+ }
+}

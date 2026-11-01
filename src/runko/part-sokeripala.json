@@ -1,0 +1,66 @@
+{
+ "_doc": "Osavaljas sokeripala (make part P=sokeripala, yleinen osalevy PART 99): demon loppu ennen lopputekstejä, tori -> SimCity 2026 -> JATKUU... (src/proto/sokeripala).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-sokeripala.d64",
+ "siirtyma": {
+  "efekti": "tahtivali",
+  "edellinen": "spritet"
+ },
+ "vapaana_lopussa": [
+  "1a00-3fff",
+  "8000-bfff",
+  "c000-cfff",
+  "e000-fff9"
+ ],
+ "vapaana_kesken": [
+  {
+   "ennen": "#S_WAIT SCENE_START + T_TAULU + 1",
+   "alueet": [
+    "c000-cfff",
+    "5600-5bff"
+   ]
+  }
+ ],
+ "_vapaana_kesken": "Panoraaman SPPI ja SPP3 sekä puskurin B ruutu $cc00 ovat $c000-$cfff:ssä vain panoraaman ajan (SPP3 vapautetaan kehyksessä T_LEHTI + 1), ja $5600-$5bff (SPP2, SP2D) on vapaa sivun jälkeen (T_PELI + 1: SP4K $4800- ja sp_taulun kirjoittama kiillon koodi $55ff asti, taulun spritet $4000 ja ruutu $5c00); pyörähdys, sivu, peli ja taulu käyttävät muuten pankkeja 1 ja 2 sekä $e000-. kokoa.py esilataa seuraavan osan $c000-$cfff-tiedoston ja taulun (KU) ennen viimeistä S_WAITia (pelin aikana), koska taulun 240 kehystä ei riitä kodin kolmeen tiedostoon (46 lohkoa, VICE 273 kehystä).",
+ "inc": "build/runko/part-sokeripala/files.inc",
+ "labels": [
+  "build/runko/part-sokeripala/payload.labels",
+  "build/sokeripala/sp.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-sokeripala/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "   SOKERIPALA",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/sokeripala_glue.asm",
+   "prg_dir": "build/sokeripala/demo",
+   "pack": true
+  }
+ ]
+}

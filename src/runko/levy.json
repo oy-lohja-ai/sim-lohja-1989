@@ -1,0 +1,138 @@
+{
+ "_doc": "Demon levy (tools/disk/levy.py). Järjestys = hakemisto = levyn raidat = latausjärjestys. Merkkijono = dirartin rivi (DEL, raita 0, enintään 16 merkkiä PETSCII, À = vaakaviiva). label = lohko f_x (kohtaustaulun #S_LOAD f_x), pack = ZX0 (Krill loadcompd), boot = nimi vain payloadissa (musiikki). names_from: kohtaustaulun #S_LOAD f_x -rivit latausjärjestyksessä (levyllä X, tiedostot <prg_dir>/<x>.prg), joten kohtauksen omistaja lisää tiedoston vain omaan tiedostoonsa; sisääntulot build/d64/parts.inc:stä. piilota: PRG-tiedostot paitsi boot tyyppitavulla 0 (LOAD\"$\" näyttää vain bootin, INFOn ja dirartin, Krill lataa ne kuten ennen). id: 5 merkkiä = otsikkorivin loppu (ID \"OY\"). name_b ja dirart_b: koko demon levyn B-puolet (tools/disk/kokoa.py), dirart hakemiston lopussa kuten puolella A.",
+ "name": "SIM LOHJA 1989",
+ "id": "OY AI",
+ "piilota": true,
+ "name_b": "SIM LOHJA 1989 B",
+ "dirart_b": [
+  "       ╱╲       ",
+  "      ╱  ╲      ",
+  " ╱╲  ╱    ╲     ",
+  "╱  ╲ ╲    ╱  ╱╲ ",
+  "╲  ╱ ▏╲  ╱▒ ╱  ╲",
+  "▏╲╱▒ ▏▘╲╱▒▒ ╲  ╱",
+  "▏▘▒▒ ▏▘▘▒▒▒ ▏╲╱▒",
+  "▏▘▒▒ ▏▘▘▒▒▒ ▏▘▒▒",
+  "╲▘▒╱ ╲▘▘▒▒╱ ╲▘▒╱",
+  " ╲╱   ╲▘▒╱   ╲╱ ",
+  "       ╲╱       ",
+  "▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔",
+  "    PUOLI  B    ",
+  "                ",
+  "   DEMO ALKAA   ",
+  "   PUOLELTA A   ",
+  "  OY LOHJA AI   ",
+  " ZOOPARTY  2026 "
+ ],
+ "out": "build/simlohja.d64",
+ "inc": "build/runko/demo/files.inc",
+ "labels": [
+  "build/runko/demo/payload.labels",
+  "build/hilint/hillner.labels",
+  "build/d64/kyltti.labels",
+  "build/d64/ajo.labels",
+  "build/d64/purku1.labels",
+  "build/runko/loppu/loppu.labels",
+  "build/logo/demo/alku.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/demo/boot.prg"
+  },
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/alku_glue.asm",
+   "prg_dir": "build/logo/demo",
+   "pack": true,
+   "optional": true
+  },
+  {
+   "names_from": "src/scene/hil_glue.asm",
+   "prg_dir": "build/d64",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/koti_glue.asm",
+   "prg_dir": "build/koti/demo",
+   "pack": true,
+   "optional": true
+  },
+  {
+   "names_from": "src/scene/greetsit_glue.asm",
+   "prg_dir": "build/greetsit/demo",
+   "pack": true,
+   "optional": true
+  },
+  {
+   "name": "LOPPU1",
+   "label": "f_loppu1",
+   "src": "build/runko/loppu/loppu.prg",
+   "range": [
+    "8000",
+    "src_end"
+   ],
+   "pack": true,
+   "labels": "build/runko/loppu/loppu.labels",
+   "syms": [
+    "loppu_pre",
+    "loppu_init",
+    "loppu_show",
+    "loppu_go",
+    "loppu_run"
+   ]
+  },
+  {
+   "name": "LOPPU2",
+   "label": "f_loppu2",
+   "src": "build/runko/loppu/loppu.prg",
+   "range": [
+    "6000",
+    "bmp_end"
+   ],
+   "pack": true,
+   "labels": "build/runko/loppu/loppu.labels"
+  },
+  {
+   "name": "LOPPU3",
+   "label": "f_loppu3",
+   "src": "build/runko/loppu/loppu.prg",
+   "range": [
+    "e000",
+    "l3_end"
+   ],
+   "pack": true,
+   "labels": "build/runko/loppu/loppu.labels"
+  },
+  "   *            ",
+  "  ╱╲            ",
+  " ╱  ╲           ",
+  " ╲  ╱     ╱╲    ",
+  " ▏╲╱▒    ╱  ╲   ",
+  " ▏▘▒▒   ╱    ╲  ",
+  " ▏▘▒▒   ╲    ╱  ",
+  " ▏▘▒▒   ▏╲  ╱▒  ",
+  " ▏▘▒▒   ▏▘╲╱▒▒  ",
+  " ▏▘▒▒   ╲▘▘▒▒╱  ",
+  " ╲▘▒╱    ╲▘▒╱   ",
+  "  ╲╱      ╲╱    ",
+  "▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔",
+  "  OY LOHJA AI   ",
+  " ZOOPARTY  2026 ",
+  "                ",
+  "  LOAD\"*\",8,1   ",
+  "MUSA: PATEMATHIC",
+  "LOADER BY KRILL "
+ ]
+}

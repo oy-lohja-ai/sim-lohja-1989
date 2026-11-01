@@ -1,0 +1,56 @@
+{
+ "_doc": "Osavaljas taulu2e (make part P=taulu2e, yleinen osalevy PART 99): mykkäelokuvan kerrontataulu 2e, teksti tekstit.yaml:n taulusta 2e (src/proto/taulu); koko demossa graafin jälkeen, ennen kuoppaa (järjestys src/runko/jarjestys.json).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-taulu2e.d64",
+ "vapaana_lopussa": [
+  "fe00-feff"
+ ],
+ "_vapaana_lopussa": "Taulun oma KU-taulu (esiladattu graafin aikana $fe00:aan) on kopioitu ikkunaan ennen taulua, joten sivu on vapaa taulun aikana: kuopan KPN ($fc00-$fecd) esiladataan sinne, ja kuoppa jatkuu saumana.",
+ "inc": "build/runko/part-taulu2e/files.inc",
+ "labels": [
+  "build/runko/part-taulu2e/payload.labels",
+  "build/taulu2e/taulu.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-taulu2e/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "    TAULU 2E",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "build/taulu2e/taulu2e_glue.asm",
+   "prg_dir": "build/taulu2e",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/taulu",
+  "demo",
+  "N=2e"
+ ]
+}

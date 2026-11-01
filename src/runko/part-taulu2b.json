@@ -1,0 +1,60 @@
+{
+ "_doc": "Osavaljas taulu2b (make part P=taulu2b, yleinen osalevy PART 99): mykkäelokuvan kerrontataulu 2b, teksti tekstit.yaml:n taulusta 2b (src/proto/taulu). VIC-pankki 3 (Makefile PANKKI_2b): $1a00-$bfff vapaa koko ajan kuoppa-kylttien alun esilataukselle.",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-taulu2b.d64",
+ "vapaana_lopussa": [
+  "1a00-bfff"
+ ],
+ "jatkuva": [
+  "kuoppa"
+ ],
+ "jatkuva_alustus": "taulu_sauma",
+ "_jatkuva": "Kuopan perään ilman pimennystä: kuopan viimeisen kuvan jälkeen taulu valottuu iskulle. Koodi ja bittikartta ladataan välialueille $5800- ja $6000-$7f3f kuopan kuvan 2 aikana (part-kuoppa.json vapaana_kesken). Kuoppa loppuu kuvaan 2, joka käyttää pankkia 3 viimeiseen kehykseen asti, joten taulu_sauma (jatkuva_alustus) pimentää kuvan sauman jälkeen, ottaa rungon IRQ:n ja kopioi koodin ja bittikartan pankkiin 3; taulun ensimmäiset kehykset valottuvat mustasta.",
+ "inc": "build/runko/part-taulu2b/files.inc",
+ "labels": [
+  "build/runko/part-taulu2b/payload.labels",
+  "build/taulu2b/taulu.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-taulu2b/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "    TAULU 2B",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "build/taulu2b/taulu2b_glue.asm",
+   "prg_dir": "build/taulu2b",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/taulu",
+  "demo",
+  "N=2b"
+ ]
+}

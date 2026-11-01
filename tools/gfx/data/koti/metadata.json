@@ -1,0 +1,122 @@
+{
+ "kuva": {
+  "leveys_mc": 160,
+  "rajaus_riveja": 144,
+  "bittikartta_riveja": 264,
+  "vieritys": 120,
+  "alku_rivi": 120,
+  "loppu_rivi": 0,
+  "SKY_T": 101,
+  "solukorjaukset": 305,
+  "huom": "bittikartta: 255 = MC 00 = rivin $D021, vain riveillä 0..SKY_T-1; kuva on jo c64fmt.encode_layers-muodossa (solun värirajat). Alussa (s = 0) näkyvät rivit SCROLL..SCROLL+143, lopussa 0..143: kuva vierii alas kameran noustessa."
+ },
+ "kerrokset": [
+  {
+   "nimi": "taivas ja järvi",
+   "tekniikka": "$D021 riveittäin (rasteri.npy, ruudun rivit 0-143)",
+   "nopeus": 0
+  },
+  {
+   "nimi": "Liessaari",
+   "tekniikka": "3 vierekkäistä X-laajennettua MC-spriteä (ranta_spritet.npy, 3 x 21 x 12 roolia), spritet 0-2, bittikartan takana; vastarannan muut kerrokset ovat rasterissa",
+   "roolit": {
+    "1": 11,
+    "2": "oma",
+    "3": 15
+   },
+   "paikat": [
+    {
+     "x": 64,
+     "y": 34,
+     "oma": 9
+    },
+    {
+     "x": 88,
+     "y": 34,
+     "oma": 9
+    },
+    {
+     "x": 112,
+     "y": 34,
+     "oma": 9
+    }
+   ],
+   "huom": "x, y = vasen yläkulma ruudulla (MC-px, rivi), paikallaan koko kohtauksen",
+   "nopeus": 0
+  },
+  {
+   "nimi": "keskiala",
+   "tekniikka": "MC-bittikartta, pystyvieritys (linecrunch)",
+   "nopeus": 1
+  },
+  {
+   "nimi": "etuala",
+   "tekniikka": "kissa MC-spriteinä (kangas CAT_H x 160, 255 = läpinäkyvä; värit 0 = oma, 11 = $D025, 15 = $D026)",
+   "roolit_yhteiset": [
+    11,
+    15
+   ],
+   "korkeus": 52,
+   "x": 34,
+   "rata": "yläreunan ruuturivi = 90 + 3.607 * s (s = vieritys 0..120)",
+   "nopeus": 3.607,
+   "huom": "ei käy $D021-vyöhykkeellä: poistuu ruudun alareunasta"
+  }
+ ],
+ "kimallus_d021": {
+  "rivit": [
+   48,
+   60
+  ],
+  "kierto": [
+   14,
+   14,
+   14,
+   14,
+   14,
+   14,
+   14,
+   14,
+   14,
+   15,
+   14,
+   14,
+   14,
+   14,
+   14,
+   14,
+   14,
+   15,
+   1,
+   15,
+   14,
+   14,
+   14,
+   14,
+   14,
+   3,
+   14,
+   14,
+   14,
+   14,
+   14,
+   14
+  ],
+  "huom": "rivit = ruudun rivit loppurajauksessa (rasteri.npy:n indeksit)"
+ },
+ "kamera": {
+  "silma_alussa_m": 0.42,
+  "silma_lopussa_m": 5.13,
+  "horisontti_alussa": 96,
+  "horisontti_lopussa": 40,
+  "parallaksin_syvyys_m": 5.0,
+  "polttovali": 200.0,
+  "kaukokerros": {
+   "polttovali": 380.0,
+   "korkeus_m": 9.0
+  },
+  "suunta_astetta": 263.0,
+  "katsojan_paikka": "yleistetty harjun rinne keskustan laidalla",
+  "jarvi": "OpenStreetMap (ODbL)"
+ }
+}

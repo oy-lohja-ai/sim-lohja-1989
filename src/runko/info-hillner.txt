@@ -1,0 +1,38 @@
+Sim Lohja 1989: Hillnerin talo (ennakko)
+Oy Lohja AI. Osa demosta, joka on
+tekeillä Zooparty 2026:een.
+
+PAL C64 ja 1541. LOAD"*",8,1 ja RUN.
+Ei lisälaitteita.
+
+Tekoäly (Zoopartyn sääntö: AI-käyttö
+ilmoitetaan)
+Demon koodin (6510), työkalut, grafiikan
+piirron ja ajoituksen tekivät tekoäly-
+agentit (Claude, Anthropic) ihmisohjaajan
+ohjauksessa. Kaikki efektit lasketaan
+6510:llä reaaliajassa. Grafiikka on
+piirrettyä pikseligrafiikkaa, ei
+digitoituja kuvia. Musiikin on säveltänyt
+ihminen. AI teki soittimen integroinnin
+ja pidensi sovitusta mykistämällä ja
+toistamalla osia.
+
+Tekijät
+Musiikki: "Appeltrad" by Patemathic
+Soitin: Blackbird by lft
+Loader by Krill (repository version 194)
+Pakkaus: ZX0-muoto (Einar Saukas), dali-
+variantti (Bitbreaker); pakkaaja ja
+purkaja kirjoitettu tähän demoon.
+
+English
+AI disclosure: code, tools, pixel art
+and timing were made by AI agents
+(Claude, Anthropic) directed by a human
+director. All effects are computed in
+real time on the 6510. Music is human-
+composed: "Appeltrad" by Patemathic,
+player Blackbird by lft. The arrangement
+was extended by AI (muting and repeating
+parts). Loader by Krill.

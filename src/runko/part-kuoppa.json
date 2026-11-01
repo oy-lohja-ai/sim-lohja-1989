@@ -1,0 +1,74 @@
+{
+ "_doc": "Osavaljas kuoppa (make part P=kuoppa, yleinen osalevy PART 99). Lohjantähden kuoppa 1989: kauhakohtaus 0-419 (lyhennetty), runko nousee 420-1019, loppu 1020 (valmis torni pois); valmis torni ja kyltit osalevyllä kuoppa-kyltit.",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-kuoppa.d64",
+ "loppuun": [
+  "KPN",
+  "KPY"
+ ],
+ "_loppuun": "KPN (nousu mustasta, kp_nousu.asm) koko demon levypuolen loppuun: muiden tiedostojen paikat eivät muutu (taulu2b -> kuoppa-kyltit -sauma on herkkä latausajalle). KPY (pyyhkäisy kuvasta 1 kuvaan 2) myös osalevyn loppuun: sen kasvu ei siirrä kuvan 2 tiedostoja levyllä.",
+ "siirtyma": {
+  "efekti": "crt",
+  "edellinen": "graafi"
+ },
+ "vapaana_lopussa": [
+  "4f00-7fff",
+  "8000-bfff"
+ ],
+ "_vapaana_lopussa": "Kuva 1 (pankki 1 KP1C $4478-$7faf ja pankki 2: puskuri B $8400/$a000, KP1BS $8800-$9fb5) vapautuu kehyksessä 432, ja kuva 2 käyttää pankkia 3, ydintä, KP2R:ää ja jalankulkijaa ($4800-$4e7f) viimeiseen kehykseen asti (kuoppa2.asm ei viittaa pankin 2 symboleihin). Kuopan taulu päättyy kp2_go:hon eikä odota S_WAIT SCENE_END - 3:een (muuten taulu2b:n taulu alkaisi vasta 3 kehystä ennen loppua ja kylttien 60 lohkoa taulu2b:n aikana myöhästyisivät saumasta), joten $4f00-$7fff ja $8000-$bfff ovat vapaita taulun lopusta: taulun 2b koodi (TAULU6 $5800-), bittikartta (TAULUB $6000-$7f3f) ja taulu KUL esiladataan pankkiin 1, ja kuoppa-kylttien kuvan 3 tiedosto (KP3 tai KP3B, pankki 2) kaksi edellä. Kartoitus tarkistaa, ettei kuva 2 kirjoita KP3:n päälle.",
+ "lataus_kehysta_lohkolle": 12,
+ "_lataus_kehysta_lohkolle": "Kuvan 2 aikana lataus on noin 12 kehystä lohkolta (VICE: TAULUB, TAULU6, KP3 ja KUL, 37 lohkoa, 442 kehystä taulun lopusta): kaksi edellä -esilatausten arvio tällä nopeudella. Koko KP3 kuopan aikana myöhästyttäisi taulu2b:n taulun saumasta.",
+ "jatkuva": [
+  "taulu2e"
+ ],
+ "jatkuva_odota": 26,
+ "jatkuva_show": [
+  "",
+  "kpn_show"
+ ],
+ "_jatkuva": "Taulun 2e perään ilman pimennystä: taulu 2e on merkkitilassa $a000-$bfff, jota kuopan alku ei käytä; kuopan alun tiedostot esiladataan graafin (kaksi edellä) ja taulun aikana. kp_stage, kp_init ja kpn_prep (noin 20 kehystä, värimuisti) ajetaan taulun mustassa lopussa (MUSTA_2e 26, ruutu tyhjäksi; jatkuva_odota 26) ja kpn_show (VIC, kuva mustana) taulun viimeiseksi kehykseksi; kuoppa pyyhkiytyy esiin mustasta omana nousunaan (kp_nousu.asm). KPN $fc00- esiladataan taulun aikana.",
+ "inc": "build/runko/part-kuoppa/files.inc",
+ "labels": [
+  "build/runko/part-kuoppa/payload.labels",
+  "build/kuoppa/demo/kuoppa.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-kuoppa/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "  LOHJANTAHTI",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/kuoppa_glue.asm",
+   "prg_dir": "build/kuoppa/demo",
+   "pack": true,
+   "loppuun": [
+    "KPY"
+   ]
+  }
+ ]
+}

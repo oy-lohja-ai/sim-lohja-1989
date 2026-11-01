@@ -1,0 +1,58 @@
+{
+ "_doc": "Osavaljas greetsit (make part P=greetsit). Greetsit yksin (partti 4).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-greetsit.d64",
+ "jatkuva": [
+  "vuosi2026"
+ ],
+ "vapaana_lopussa": [
+  "2300-3fff",
+  "e000-fff9"
+ ],
+ "_vapaana_lopussa": "Greetsit käyttää $1b00-$22bf ja $4000-$bfff; GREETSIT6 ($2300-) ja GREETSIT7 ($e000-) kopioidaan alussa paikalleen (greetsit_kopio), joten alueet ovat vapaita koko greetsitin ajan (kodin KOTI3 esiladataan $e000:aan greetsitin aikana).",
+ "lataus_kehysta_lohkolle": 50,
+ "_lataus_kehysta_lohkolle": "Kernelin aikana lataaja saa vähän aikaa (VICE: TAULU8S 11 lohkoa 708 kehystä, KOTI3 18 lohkoa 544 kehystä): kokoa.py:n esilatausarvio greetsitin aikana.",
+ "iskuvara_pakota": 45,
+ "_iskuvara_pakota": "Sokeripalan taulun aikana esiladatut palat (51 lohkoa) valmistuvat VICE:ssä 2 kehystä sokeripalan jälkeen, 295 rpm:n asemalla 14 (iskuvara 28 -> 17). Alku iskulla, jota ennen lataukset valmiit 45 kehystä VICE:ssä, joten 295 rpm:llä ja oikean levyn kiertovaiheella vara pysyy yli 25.",
+ "inc": "build/runko/part-greetsit/files.inc",
+ "labels": [
+  "build/runko/part-greetsit/payload.labels",
+  "build/greetsit/demo/greetsit.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-greetsit/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "   TERVEISET",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/greetsit_glue.asm",
+   "prg_dir": "build/greetsit/demo",
+   "pack": true
+  }
+ ]
+}

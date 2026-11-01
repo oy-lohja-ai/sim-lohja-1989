@@ -1,0 +1,101 @@
+{
+ "_doc": "Kohtausten väliset siirtymät: seuraavan osan part-json \"siirtyma\": {\"efekti\": nimi, \"edellinen\": osa}. Edellisen taulu ajaa askeleet pimennyksen (ku_cut) jälkeen, kun seuraavan alku latautuu, ja seuraavan I_SHOW kutsuu ensin loppu-rutiinin (kuva jää). Tiedostot dir/<nimi>.prg, symbolit dir/syms.inc lohkossa lohko, labels debuggaukseen. \"esilataus\": true: tiedostot ladataan edellisen aikana (sen vapaille sivuille), ja askeleet vain kutsuvat. \"ajoalueet\": [[\"9fc0\", \"a100\"], ...]: alueet, joihin efekti kopioi itsensä (kartoitus ei kirjoita niihin).",
+ "tahtivali": {
+  "_doc": "Sprite-ennätys -> sokeripala: logot haihtuvat tähdiksi (src/runko/tahtivali.asm)",
+  "dir": "build/tahtivali",
+  "make": "tahtivali",
+  "lohko": "tv",
+  "labels": "tv.labels",
+  "tiedostot": [
+   "TV1",
+   "TV2"
+  ],
+  "askeleet": [
+   "#S_LOAD f_tv1                  ; latausväli: logot, tähdet (tahtivali.asm)",
+   "#S_CALL tv.tv_go",
+   "#S_LOAD f_tv2                  ; taivas",
+   "#S_CALL tv.tv_sky"
+  ],
+  "loppu": "tv_end"
+ },
+ "filmi": {
+  "_doc": "Kerrontataulu -> seuraava: taulun filminaarmu ja pöly jatkuvat mustalla, kun seuraavan alku latautuu ja alustuu (taulu2 -> hillner: hil_prep kirjoittaa pankin 2 ja värimuistin, joten sauma ei käy). Ei omia tiedostoja: taulu on yhä muistissa (src/proto/taulu taulu_jalki). Ei loppu-rutiinia: seuraava ottaa VIC:n ja spritet alussaan.",
+  "dir": "build/taulu2",
+  "make": [
+   "-C",
+   "src/proto/taulu",
+   "demo",
+   "N=2"
+  ],
+  "lohko": "fi",
+  "labels": "taulu.labels",
+  "tiedostot": [],
+  "askeleet": [
+   "#S_CALL fi.taulu_jalki          ; naarmu ja pöly mustalla (taulu.asm)"
+  ],
+  "loppu": null
+ },
+ "crt": {
+  "_doc": "Graafi -> kuoppa: tietokoneruutu sammuu kuin kuvaputki (src/runko/crt.asm, tools/disk/crt.py)",
+  "dir": "build/crt",
+  "make": "crt",
+  "lohko": "crt",
+  "labels": "crt.labels",
+  "esilataus": true,
+  "tiedostot": [
+   "CRT1"
+  ],
+  "ajoalueet": [
+   [
+    "9fc0",
+    "a100"
+   ],
+   [
+    "a200",
+    "a300"
+   ],
+   [
+    "bec0",
+    "c000"
+   ]
+  ],
+  "askeleet": [
+   "#S_CALL crt.crt_go                ; graafin kuva painuu viivaksi, viiva pisteeksi, piste hiipuu"
+  ],
+  "loppu": "crt_end"
+ },
+ "ilotulitus": {
+  "_doc": "Kuoppa-kyltit -> spritet: logot ovat lentäneet taivaalle, ja yötaivaalle nousee raketteja kuten sprite-ennätyksessä, laskuri «SPRITEJÄ: / N KPL» kasvaa 4 -> 8 (src/runko/ilotulitus.asm, tools/disk/ilotulitus.py). ILOT $c400-$ccbf: ennätys ei lataa $c000-$cfff:ää eikä koske sivuihin $c4-$cd (build.py: lentavat varattu), joten ILOT ladataan ku_cutin jälkeen ja pyörii spritetin I_STARTiin asti (it_tick lopettaa itsensä, kun VIC ei ole pankissa 3), ja se on yhä muistissa spritet -> vuosi2026 -saumassa (uusivuosi).",
+  "dir": "build/ilotulitus",
+  "make": "ilotulitus",
+  "lohko": "it",
+  "labels": "it.labels",
+  "tiedostot": [
+   "ILOT"
+  ],
+  "askeleet": [
+   "#S_LOAD f_ilot                  ; ilotulitus alkaa (ilotulitus.asm)",
+   "#S_CALL it.it_go"
+  ],
+  "loppu": null
+ },
+ "uusivuosi": {
+  "_doc": "Spritet -> vuosi2026: kuoppa-kylttien jälkeinen ilotulitus (ILOT $c400-$cabf, ennätyksen varatut sivut, joihin spritet ei koske) on yhä muistissa, joten se jatkuu pimennyksen jälkeen ilman latausta toisella laukaisulistalla: tiheä alku harvenee ja taivas tyhjenee ennen vuotta 2026 (src/runko/ilotulitus.asm it_jatko). Ei loppu-rutiinia: vuosi_go ottaa IRQ:n ja spritet pois. vaatii_siirtyma: spritetin edellä oli ilotulitus (muuten ILOT ei ole muistissa).",
+  "dir": "build/ilotulitus",
+  "make": "ilotulitus",
+  "lohko": "it",
+  "labels": "it.labels",
+  "tiedostot": [],
+  "vaatii_siirtyma": "ilotulitus",
+  "ajoalueet": [
+   [
+    "c400",
+    "ce00"
+   ]
+  ],
+  "askeleet": [
+   "#S_CALL it.it_jatko               ; ilotulitus jatkuu ja hiipuu (ilotulitus.asm)"
+  ],
+  "loppu": null
+ }
+}

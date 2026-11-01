@@ -1,0 +1,345 @@
+{
+ "taivas": {
+  "d022": 10,
+  "d023": 4,
+  "rivivari": 1
+ },
+ "maet": {
+  "d022": 4,
+  "d023": 2
+ },
+ "kaupunki": {
+  "d022": 8,
+  "d023": 10,
+  "tausta": 4
+ },
+ "piennar": {
+  "d022": 8,
+  "d023": 11,
+  "tausta": 9,
+  "rivivari": 0
+ },
+ "tie": {
+  "d022": 12,
+  "d023": 15,
+  "tausta": 11,
+  "rivivari": 0
+ },
+ "teksti": {
+  "vari": 1,
+  "varjo": 0,
+  "d022": 15
+ },
+ "sprite_pinot": [
+  {
+   "d025": 9,
+   "d026": 5
+  },
+  {
+   "d025": 9,
+   "d026": 5
+  },
+  {
+   "d025": 9,
+   "d026": 5
+  },
+  {
+   "d025": 9,
+   "d026": 5
+  },
+  {
+   "d025": 0,
+   "d026": 9
+  },
+  {
+   "d025": 0,
+   "d026": 9
+  },
+  {
+   "d025": 0,
+   "d026": 9
+  },
+  {
+   "d025": 0,
+   "d026": 9
+  }
+ ],
+ "oma_vari": {
+  "manty1": 8,
+  "manty2": 8,
+  "manty3": 8,
+  "manty4": 8,
+  "pari1": 8,
+  "pari2": 8,
+  "koivu1": 15,
+  "koivu2": 15,
+  "kauka1": 11,
+  "kauka2": 11
+ },
+ "laajentamattomat_pinot": 4,
+ "latvus_huom": "pinot 0-3 (data-rivit 0-83) ilman X-laajennusta, 12 MC-px, latvuksen keskikohta sarakkeessa 6; pinot 4-7 X-laajennettuja, rungon keskikohta sarakkeessa 3 (molemmat hires 12-14 spriten X:stä); rivi 83 tyhjä; parin toinen runko laajennetussa sarakkeessa 5 ja latvuksessa sarakkeessa 10",
+ "rungot_lahi": [
+  [
+   20,
+   "pari2"
+  ],
+  [
+   102,
+   "manty2"
+  ],
+  [
+   191,
+   "pari1"
+  ],
+  [
+   280,
+   "manty2"
+  ],
+  [
+   365,
+   "pari1"
+  ],
+  [
+   454,
+   "pari1"
+  ],
+  [
+   531,
+   "manty2"
+  ],
+  [
+   616,
+   "manty1"
+  ],
+  [
+   698,
+   "manty4"
+  ],
+  [
+   779,
+   "manty3"
+  ],
+  [
+   859,
+   "manty2"
+  ],
+  [
+   933,
+   "manty3"
+  ],
+  [
+   1022,
+   "manty3"
+  ],
+  [
+   1109,
+   "manty2"
+  ],
+  [
+   1193,
+   "manty1"
+  ],
+  [
+   1270,
+   "koivu2"
+  ],
+  [
+   1346,
+   "koivu1"
+  ],
+  [
+   1429,
+   "manty1"
+  ],
+  [
+   1508,
+   "koivu2"
+  ],
+  [
+   1599,
+   "pari1"
+  ],
+  [
+   1674,
+   "pari2"
+  ],
+  [
+   1763,
+   "pari2"
+  ],
+  [
+   1846,
+   "manty2"
+  ],
+  [
+   1935,
+   "koivu1"
+  ],
+  [
+   2021,
+   "manty1"
+  ],
+  [
+   2106,
+   "manty1"
+  ],
+  [
+   2192,
+   "manty4"
+  ],
+  [
+   2273,
+   "manty2"
+  ],
+  [
+   2360,
+   "manty3"
+  ],
+  [
+   2438,
+   "manty2"
+  ],
+  [
+   2517,
+   "manty4"
+  ],
+  [
+   2594,
+   "manty2"
+  ]
+ ],
+ "rungot_kauka": [
+  [
+   20,
+   "kauka1"
+  ],
+  [
+   156,
+   "kauka1"
+  ],
+  [
+   299,
+   "kauka2"
+  ],
+  [
+   430,
+   "kauka2"
+  ],
+  [
+   583,
+   "kauka2"
+  ],
+  [
+   726,
+   "kauka2"
+  ],
+  [
+   871,
+   "kauka1"
+  ],
+  [
+   1026,
+   "kauka1"
+  ],
+  [
+   1152,
+   "kauka1"
+  ],
+  [
+   1312,
+   "kauka2"
+  ],
+  [
+   1461,
+   "kauka2"
+  ]
+ ],
+ "jakso_lahi": 2720,
+ "jakso_kauka": 1600,
+ "leveydet": {
+  "taivas": 256,
+  "maet": 128,
+  "kaupunki": 480,
+  "piennar": 64,
+  "tie": 32
+ },
+ "nopeudet_hires": {
+  "taivas": 0.125,
+  "maet": 0.25,
+  "kaupunki": 0.5,
+  "piennar": 2.0,
+  "teksti": 2.0,
+  "lahi": 2.0,
+  "kauka": 1.0,
+  "tie": [
+   2.0,
+   3.5
+  ]
+ },
+ "vesitornit": {
+  "kaista": "kaupunki",
+  "x": {
+   "vanha": 226,
+   "uusi": 246
+  },
+  "huom": "kaupunkikaistan sarakkeet; kaista on 480 leveä, joten tornit näkyvät ajossa kerran (ikkuna 0,25 MC-px/kehys: noin kehykset 265-1040)"
+ },
+ "aurinko": {
+  "kaista": "taivas",
+  "x": 112,
+  "y": 67
+ },
+ "kimallus_d021": {
+  "rivit": [
+   97,
+   110
+  ],
+  "kierto": [
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   15,
+   10,
+   10,
+   10,
+   10,
+   10,
+   1,
+   15,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   8,
+   8,
+   8,
+   10,
+   10,
+   10,
+   10,
+   15,
+   10,
+   10,
+   10,
+   10
+  ],
+  "huom": "valinnainen: järven rivit kiertävät värijonoa (kuten koti), vaihe rivikohtainen"
+ },
+ "avainkuvat": {
+  "alku": 0,
+  "keski": 625,
+  "loppu": 1250
+ },
+ "teksti_huom": "greetsit moottorin fontilla (kyltin kirjaimisto 14 riviä): vari = värimuisti (%11), varjo = $D023 (%10)",
+ "lahteet": {
+  "jarvi": "OpenStreetMap (ODbL): järvi luoteessa 1,7-3 km harjulta",
+  "vesitornit": "valokuvien mukaan piirretty (vanha ja uusi torni)",
+  "harju": "valokuvan mukaan piirretty muoto"
+ }
+}

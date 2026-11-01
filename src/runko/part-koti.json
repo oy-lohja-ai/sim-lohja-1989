@@ -1,0 +1,73 @@
+{
+ "_doc": "Osavaljas koti (make part P=koti). Koti yksin.",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-koti.d64",
+ "jatkuva": [
+  "sokeripala",
+  "taulu3b"
+ ],
+ "jatkuva_odota": 8,
+ "_jatkuva": "Sokeripalan perään ilman mustaa: sokeripalan taulu häivyttää itsensä mustaksi ja koti alkaa iskulle. KOTI1-3 ladataan sokeripalan aikana. koti_init1 nollaa bss:n $4000-$4771 ja nollasivun $02-$9f ja asettaa spritet, joten se ajetaan vasta sokeripalan taulun häivytyksessä (jatkuva_odota 8: spritet pois, taulun IRQ-koodi $4800-). Taulun 3b perään: taulu 3b on merkkitilassa $6000-$7fff (kodin vapaa alue) ja lopussa 10 kehystä musta (MUSTA_3b, ruutu tyhjäksi), ja koti_init1 ajetaan sen aikana (jatkuva_odota 8).",
+ "inc": "build/runko/part-koti/files.inc",
+ "labels": [
+  "build/runko/part-koti/payload.labels",
+  "build/koti/demo/koti.labels"
+ ],
+ "vapaana_lopussa": [
+  "5800-5bff",
+  "6000-7fff",
+  "8000-bfff"
+ ],
+ "vapaana_kesken": [
+  {
+   "ennen": "#S_LOAD f_koti4",
+   "alueet": [
+    "5f00-5fff"
+   ]
+  },
+  {
+   "ennen": "#S_LOAD f_koti5",
+   "alueet": [
+    "6000-7fff"
+   ]
+  }
+ ],
+ "_vapaana_kesken": "Koti ei käytä $5f00-$7fff:ää lainkaan (KOTI4 päättyy $5ecc:hen). Lopun taulu (KU) esiladataan sivulle $5f heti koti_go:n jälkeen (ennen KOTI4:ää; kodin alussa lataus söisi sokeripala -> koti -välin iskuvaran) ja LOPPU2 koti_buildin jälkeen, ei kodin välkkeen aikana (kodin lopussa lataus 16-24 kehystä lohkolta). Ennen koti_buildia ladattuna LOPPU2 (90 kehystä) viivästyttäisi kameraa (kehykset 233-255).",
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-koti/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "  KOTI 1959",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info-koti.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/koti_glue.asm",
+   "prg_dir": "build/koti/demo",
+   "pack": true,
+   "optional": true
+  }
+ ]
+}

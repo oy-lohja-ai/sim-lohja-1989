@@ -1,0 +1,199 @@
+{
+ "tori": {
+  "tausta": 0
+ },
+ "lehti": {},
+ "peli": {
+  "neuvo": [
+   1,
+   3,
+   27,
+   12
+  ],
+  "budjetti": [
+   1,
+   16,
+   27,
+   24
+  ],
+  "tekstit": [
+   [
+    9,
+    5,
+    "Museovirasto:"
+   ],
+   [
+    9,
+    7,
+    "Rakennusta ei"
+   ],
+   [
+    9,
+    8,
+    "saa purkaa."
+   ],
+   [
+    2,
+    18,
+    "SSO + WasaGroup:"
+   ],
+   [
+    3,
+    19,
+    "hotellihanke"
+   ],
+   [
+    2,
+    21,
+    "Kulttuuriarvo"
+   ]
+  ],
+  "raha": [
+   21,
+   19,
+   "+€€€"
+  ],
+  "arvo": [
+   23,
+   21
+  ],
+  "ok": [
+   9,
+   10
+  ],
+  "ohita": [
+   16,
+   10
+  ],
+  "sokeripala": [
+   264,
+   120
+  ],
+  "sso_kuva": [
+   2,
+   4,
+   6,
+   7
+  ],
+  "sso_logo": [
+   18,
+   4,
+   8,
+   3
+  ],
+  "sso_tekstit": [
+   [
+    9,
+    5,
+    "SSO:"
+   ],
+   [
+    9,
+    6,
+    "Puretaan"
+   ],
+   [
+    9,
+    7,
+    "Sokeripala."
+   ],
+   [
+    9,
+    8,
+    "Tilalle hotelli!"
+   ]
+  ],
+  "silmat": [
+   "keski",
+   "vasen",
+   "oikea",
+   "kiinni",
+   "isku"
+  ],
+  "silma_solut": [
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    4
+   ]
+  ],
+  "suut": [
+   "virne",
+   "auki",
+   "puoli",
+   "pieni"
+  ],
+  "suu_solut": [
+   [
+    3,
+    3
+   ],
+   [
+    3,
+    4
+   ]
+  ],
+  "spritet": [
+   "kj_reuna",
+   "kj_tayte",
+   "timantti_k0a",
+   "timantti_k0b",
+   "timantti_k1a",
+   "timantti_k1b",
+   "timantti_k2a",
+   "timantti_k2b",
+   "timantti_k3a",
+   "timantti_k3b",
+   "timantti_k4a",
+   "timantti_k4b",
+   "timantti_k5a",
+   "timantti_k5b",
+   "timantti_k6a",
+   "timantti_k6b",
+   "timantti_k7a",
+   "timantti_k7b",
+   "timantti_m0a",
+   "timantti_m0b",
+   "timantti_m1a",
+   "timantti_m1b",
+   "timantti_m2a",
+   "timantti_m2b",
+   "timantti_m3a",
+   "timantti_m3b",
+   "timantti_m4a",
+   "timantti_m4b",
+   "timantti_m5a",
+   "timantti_m5b",
+   "timantti_m6a",
+   "timantti_m6b",
+   "timantti_m7a",
+   "timantti_m7b",
+   "kopteri_0",
+   "kopteri_1"
+  ],
+  "varit": {
+   "timantti": [
+    7,
+    0
+   ],
+   "kj_reuna": 0,
+   "kj_tayte": 1
+  },
+  "vaiheet": 8
+ },
+ "nimi": {
+  "leveys": 95,
+  "korkeus": 17,
+  "x0": 0,
+  "sx": 0.62,
+  "track": 3,
+  "varit": {
+   "d025": 7,
+   "sprite": 10,
+   "d026": 0
+  }
+ }
+}

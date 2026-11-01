@@ -1,0 +1,54 @@
+{
+ "_doc": "Osavaljas graafi (make part P=graafi, yleinen osalevy PART 99): paluu kaupungintalon peliin Hillnerin purun jälkeen, Kaaviot-ikkuna (src/proto/graafi).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-graafi.d64",
+ "jatkuva": [
+  "taulu2d"
+ ],
+ "jatkuva_show": [
+  "",
+  "graafi_show"
+ ],
+ "_jatkuva": "Taulun 2d perään ilman pimennystä: taulu 2d on merkkitilassa $6000-$7fff, joten GRAAFI2 ($8c00-$bf3f) esiladataan taulun aikana; graafi_init nollaa vain oman nollasivunsa ($02-), ja graafi_show (VIC) ajetaan taulun viimeiseksi kehykseksi (jatkuva_show).",
+ "inc": "build/runko/part-graafi/files.inc",
+ "labels": [
+  "build/runko/part-graafi/payload.labels",
+  "build/graafi/graafi.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-graafi/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "     GRAAFI",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/graafi_glue.asm",
+   "prg_dir": "build/graafi",
+   "pack": true
+  }
+ ]
+}

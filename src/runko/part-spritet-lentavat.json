@@ -1,0 +1,57 @@
+{
+ "_doc": "Osavaljas spritet-lentavat (make part P=spritet-lentavat, yleinen osalevy PART 99): spritet-muunnos VARIANT=lentavat (src/proto/spritet).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-spritet-lentavat.d64",
+ "siirtyma": {
+  "efekti": "ilotulitus",
+  "edellinen": "kuoppa-kyltit"
+ },
+ "_siirtyma": "Kuoppa-kylttien jälkeen ilotulitus alkaa mustalla, joten väliin ei jää pitkää mustaa ja logojen lento jatkuu ilotulitukseen: raketit nousevat SPR1-SPR3:n latautuessa spritetin alkuun asti.",
+ "inc": "build/runko/part-spritet-lentavat/files.inc",
+ "labels": [
+  "build/runko/part-spritet-lentavat/payload.labels",
+  "build/spritet-lentavat/demo/spritet.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-spritet-lentavat/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "    SPRITET",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/spritet-lentavat_glue.asm",
+   "prg_dir": "build/spritet-lentavat/demo",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/spritet",
+  "demo",
+  "VARIANT=lentavat"
+ ]
+}

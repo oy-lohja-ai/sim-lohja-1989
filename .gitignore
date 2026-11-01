@@ -1,0 +1,15 @@
+# build output
+build/
+__pycache__/
+.venv/
+.DS_Store
+
+# third-party parts, fetched and built by tools/fetch-third-party.sh (not redistributed here)
+third_party/
+tools/krill/install-c64.prg
+tools/krill/loader-c64.prg
+tools/krill/krill.inc
+tools/gfx/data/koti/Caveat.ttf
+tools/gfx/data/taulu/Cinzel.ttf
+tools/gfx/data/koti/OFL-Caveat.txt
+tools/gfx/data/taulu/OFL-Cinzel.txt

@@ -1,0 +1,210 @@
+{
+ "_doc": "Demon aikajana: Hillnerin kohtaus osineen ja muiden nimettyjen osien alut. Demon kehys 0 = clock0 = biisin kehys constants.song_start (A1:n alku); demo kelaa musiikin sinne music_seekillä ennen kelloa. Symbolit ovat tiedostossa src/gen/timing.inc (TIM_SONG_START, TIM_SCENE_ALKU_START, TIM_SCENE_HILLNER_START (Hillner osina: HILLNER, HILLNER_SKROLLERI, HILLNER_SKROLLERI2, HILLNER_PURKU; jokaisella _START ja _END), TIM_CUE_AJOKYLTTI ja TIM_CUE_LAHIKUVA seuraavat osien alkuja, TIM_CUE_LAHIKUVA, TIM_CUE_OSUMA, TIM_CUE_OSUMA2, TIM_CUE_OSUMA3, TIM_SCENE_KOTI_START, TIM_SCENE_GREETSIT_START, TIM_SCENE_LOPPU_START, TIM_FRAMES; frames ulottuu loppukohtauksen yli tahdin verran mustaa). Tahdit ja osat ovat biisin (1 isku = 30 kehystä, ensimmäinen isku +3 kehystä). Laulurivit (lyrics) näyttävät kamera-ajon kiinteät vaiheet (pito 50 + laskeutuminen 400, src/proto/hillner).",
+ "name": "SIM LOHJA 1989 (C64)",
+ "fps": 50.124542124542124,
+ "frames": 7530,
+ "tempo": {
+  "frames_per_beat": 30,
+  "first": 3,
+  "per_bar": 4,
+  "bar": 12
+ },
+ "constants": {
+  "song_start": 1320
+ },
+ "shifts": [
+  {
+   "at": 0,
+   "by": 960,
+   "_doc": "alku aikajanan alkuun: kaikki kohtaukset +960 kehystä"
+  },
+  {
+   "at": 960,
+   "by": 120,
+   "_doc": "alku pitenee tahdilla 960 -> 1080: alun jälkeiset kohtaukset +120 kehystä"
+  }
+ ],
+ "sections": [
+  {
+   "id": "splim",
+   "label": "basso + splim (alku)",
+   "start": 120,
+   "end": 600
+  },
+  {
+   "id": "intro",
+   "label": "intro: basso, rummut + splim (alku)",
+   "start": 600,
+   "end": 1080
+  },
+  {
+   "id": "A1",
+   "label": "A1",
+   "start": 1080,
+   "end": 2040
+  },
+  {
+   "id": "B1",
+   "label": "B1 ilman rumpuja",
+   "start": 2040,
+   "end": 3000
+  },
+  {
+   "id": "A2",
+   "label": "A2",
+   "start": 3000,
+   "end": 3960
+  },
+  {
+   "id": "B2",
+   "label": "B2",
+   "start": 3960,
+   "end": 4920
+  },
+  {
+   "id": "A3",
+   "label": "A3",
+   "start": 4920,
+   "end": 5880
+  },
+  {
+   "id": "breikki",
+   "label": "breikki, basso yksin",
+   "start": 5880,
+   "end": 6360
+  },
+  {
+   "id": "jatko",
+   "label": "jatko (biisi luuppaa)",
+   "start": 6360,
+   "end": 7320
+  }
+ ],
+ "scenes": [
+  {
+   "id": "alku",
+   "name": "Alku: Oy Lohja AI -emblem",
+   "frame": 0
+  },
+  {
+   "id": "hillner",
+   "name": "Hillner 1: alkulasku",
+   "frame": 1080
+  },
+  {
+   "id": "hillner_skrolleri",
+   "name": "Hillner 2: ajo-kyltti, skrolleri",
+   "frame": 1530
+  },
+  {
+   "id": "hillner_skrolleri2",
+   "name": "Hillner 3: lähikuva, skrolleri",
+   "frame": 1890
+  },
+  {
+   "id": "hillner_purku",
+   "name": "Hillner 4: purku",
+   "frame": 2850
+  },
+  {
+   "id": "lataus_greetsit",
+   "name": "Lataus: greetsit (Hillnerin jälkeen)",
+   "frame": 3390
+  },
+  {
+   "id": "greetsit",
+   "name": "Greetsit: harjun ajo, skrolleri runkojen takana",
+   "frame": 3570
+  },
+  {
+   "id": "lataus_koti",
+   "name": "Lataus: koti (greetsien jälkeen)",
+   "frame": 4860
+  },
+  {
+   "id": "koti",
+   "name": "Koti: kamera nousee portailta, Lohjanjärvi",
+   "frame": 5100
+  },
+  {
+   "id": "lataus_loppu",
+   "name": "Lataus: loppu (kodin jälkeen)",
+   "frame": 6060
+  },
+  {
+   "id": "loppu",
+   "name": "Loppu: lopputekstit",
+   "frame": 6090
+  }
+ ],
+ "cues": [
+  {
+   "id": "ajokyltti",
+   "label": "greetsit ajo-kylttiin (= Hillner 2:n alku)",
+   "link": "hillner_skrolleri",
+   "kind": "leikkaus"
+  },
+  {
+   "id": "lahikuva",
+   "label": "leikkaus kyltin lähikuvaan (= Hillner 3:n alku, aikaisintaan noin 820)",
+   "link": "hillner_skrolleri2",
+   "kind": "leikkaus"
+  },
+  {
+   "id": "purku",
+   "label": "leikkaus lähikuvasta laajaan purkukuvaan (= Hillner 4:n alku)",
+   "link": "hillner_purku",
+   "kind": "leikkaus"
+  },
+  {
+   "id": "osuma",
+   "label": "purkupallo osuu",
+   "frame": 2910,
+   "kind": "osuma"
+  },
+  {
+   "id": "osuma2",
+   "label": "purkupallo osuu 2",
+   "frame": 3030,
+   "kind": "osuma"
+  },
+  {
+   "id": "osuma3",
+   "label": "purkupallo osuu 3",
+   "frame": 3150,
+   "kind": "osuma"
+  }
+ ],
+ "cue_kinds": [
+  {
+   "id": "osuma",
+   "label": "osuma",
+   "color": "#ff5a4f",
+   "outline": "#ffffff"
+  },
+  {
+   "id": "leikkaus",
+   "label": "leikkaus",
+   "color": "#ffffff",
+   "outline": "#7f7f7f"
+  }
+ ],
+ "min_scene_frames": 25,
+ "lyrics": [
+  {
+   "text": "pito katolla",
+   "start": 1080,
+   "end": 1130
+  },
+  {
+   "text": "kamera laskeutuu LOHJAN RAUTA -kylttiin",
+   "start": 1130,
+   "end": 1530
+  },
+  {
+   "text": "luovutus: greetsit kylttiin",
+   "start": 1530,
+   "end": 1580
+  }
+ ]
+}

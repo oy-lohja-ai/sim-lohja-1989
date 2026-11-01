@@ -1,0 +1,82 @@
+{
+ "_doc": "Osavaljas loppu (make part P=loppu). Lopputekstit yksin (partti 6).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-loppu.d64",
+ "inc": "build/runko/part-loppu/files.inc",
+ "labels": [
+  "build/runko/part-loppu/payload.labels",
+  "build/runko/loppu/loppu.labels"
+ ],
+ "jatkuva": [
+  "koti"
+ ],
+ "kirjoittaa_edellisen_aikana": [
+  "5800-5bff"
+ ],
+ "_kirjoittaa_edellisen_aikana": "loppu_init kopioi ruudun A ($5800-$5be7) kodin aikana (jatkuva siirtymä): kokoa.py tekee jatkuvan siirtymän vain, jos koti ilmoittaa alueen vapaaksi (vapaana_lopussa, vapaana_kesken tai kartoitus); jos KOTI5 ulottuisi $5800:n yli, kopio kaataisi demon.",
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-loppu/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "  LOPPUTEKSTIT",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "name": "LOPPU1",
+   "label": "f_loppu1",
+   "src": "build/runko/loppu/loppu.prg",
+   "range": [
+    "8000",
+    "src_end"
+   ],
+   "pack": true,
+   "labels": "build/runko/loppu/loppu.labels",
+   "syms": [
+    "loppu_pre",
+    "loppu_init",
+    "loppu_show",
+    "loppu_go",
+    "loppu_run"
+   ]
+  },
+  {
+   "name": "LOPPU2",
+   "label": "f_loppu2",
+   "src": "build/runko/loppu/loppu.prg",
+   "range": [
+    "6000",
+    "bmp_end"
+   ],
+   "pack": true,
+   "labels": "build/runko/loppu/loppu.labels"
+  },
+  {
+   "name": "LOPPU3",
+   "label": "f_loppu3",
+   "src": "build/runko/loppu/loppu.prg",
+   "range": [
+    "e000",
+    "l3_end"
+   ],
+   "pack": true,
+   "labels": "build/runko/loppu/loppu.labels"
+  }
+ ]
+}

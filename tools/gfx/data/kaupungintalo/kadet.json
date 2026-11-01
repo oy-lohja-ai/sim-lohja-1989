@@ -1,0 +1,62 @@
+{
+ "muoto": "kadet.bin: asennoittain muuttuneiden solujen bittikarttatavut peräkkäin (8 t per solu, solujen järjestys kuten 'solut'); solu = huoneen solu 0-999 (rivi * 40 + sarake), värit huone.kla:n",
+ "asennot": {
+  "perus": {
+   "offset": 0,
+   "solut": [],
+   "korvattu_pikseleita": 0
+  },
+  "naputus_a": {
+   "offset": 0,
+   "solut": [
+    781,
+    821
+   ],
+   "korvattu_pikseleita": 0
+  },
+  "naputus_b": {
+   "offset": 16,
+   "solut": [
+    822
+   ],
+   "korvattu_pikseleita": 0
+  },
+  "naputus_ab": {
+   "offset": 24,
+   "solut": [
+    781,
+    821,
+    822
+   ],
+   "korvattu_pikseleita": 0
+  },
+  "klikkaus": {
+   "offset": 48,
+   "solut": [
+    816,
+    817
+   ],
+   "korvattu_pikseleita": 0
+  },
+  "hiiri_vasen": {
+   "offset": 64,
+   "solut": [
+    816,
+    818,
+    855,
+    856,
+    857,
+    858,
+    859,
+    860,
+    895,
+    896,
+    897,
+    898,
+    899
+   ],
+   "korvattu_pikseleita": 9
+  }
+ },
+ "tahti": "naputus_a/naputus_b vuorotellen 4-6 kehyksen välein, klikkaus iskulle, hiiri_vasen ja perus hiiren liikkeenä"
+}

@@ -1,0 +1,69 @@
+{
+ "_doc": "Osavaljas kuoppa-kyltit (make part P=kuoppa-kyltit, yleinen osalevy PART 99): valmis Lohjantähti, ryhmälogokyltit putoavat ja lentävät taivaalle, VARIANT=kyltit.",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-kuoppa-kyltit.d64",
+ "jatkuva": [
+  "taulu2b"
+ ],
+ "jatkuva_show": [
+  "kp3_col",
+  "kp3_vic"
+ ],
+ "_jatkuva": "taulu2b -> kuoppa-kyltit ilman mustaa: kp3_init, kp4_go ja kp3_col (värimuisti, taulu2b on hires-bittikartta eikä näytä sitä) taulun aikana, kp3_vic kellon vaihdon jälkeen: kehys 0 on kuva",
+ "vapaana_kesken": [
+  {
+   "ennen": "#S_FREE f_kptb",
+   "alueet": [
+    "c000-cfff"
+   ]
+  }
+ ],
+ "_vapaana_kesken": "Pankki 3 ($c000-$cfff: taulun 2c koodi KPT $c100-, ruutu $cc00 ja spritet $c000) on vapaa kp_jatkan jälkeen (kehys T2C + 240 = 690), ja kartoitus näkee sen kylttien lopussa käytettynä. Spritetin SPR2B esiladataan sinne, ja ilotulitus ($c400-$cabf) ladataan sen vapaille sivuille (siirtymat.json vaatii_esiladatut).",
+ "inc": "build/runko/part-kuoppa-kyltit/files.inc",
+ "labels": [
+  "build/runko/part-kuoppa-kyltit/payload.labels",
+  "build/kuoppa/demo-kyltit/kuoppa.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-kuoppa-kyltit/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  "  KUOPPA: KYLTIT",
+  "  LOHJANTAHTI",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/kuoppa-kyltit_glue.asm",
+   "prg_dir": "build/kuoppa/demo-kyltit",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/kuoppa",
+  "demo",
+  "VARIANT=kyltit"
+ ]
+}

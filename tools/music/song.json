@@ -1,0 +1,17 @@
+{
+ "_doc": "Demon biisi: ainoa paikka, jossa laulutiedosto nimetään (tools/music/music.py). Laulut ovat Blackbird 1.2 -trackerin tiedostoja hakemistossa music/. Demon sovitus: Patemathicin Appeltrad, jonka osia AI mykisti ja toisti demon pituiseksi. laulut: muut laulut, music.py --laulu AVAIN (act0: MS-DOS-intron musiikki, symbolit ACT0_*).",
+ "song": "music/bb.appeltrad7-demo-luuppi.prg",
+ "sha256": "0e6ad3de930277ad18ac296e4accf06886a848c15fa7204d7f38e712bbf61ca7",
+ "title": "Appeltrad (demosovitus)",
+ "author": "Patemathic",
+ "model": "8580",
+ "laulut": {
+  "act0": {
+   "song": "music/bb.appeltrad13",
+   "sha256": "f2f7b9223a6c7b28ce898953b652010f6d6e6f155a6da143ca00e3c01b07ba04",
+   "title": "Appeltrad Act 0 (MS-DOS-intro, src/runko/dos.asm)",
+   "author": "Patemathic",
+   "model": "8580"
+  }
+ }
+}

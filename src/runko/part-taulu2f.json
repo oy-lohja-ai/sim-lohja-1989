@@ -1,0 +1,62 @@
+{
+ "_doc": "Osavaljas taulu2f (make part P=taulu2f, yleinen osalevy PART 99): mykkäelokuvan kerrontataulu 2f, teksti tekstit.yaml:n taulusta 2f (src/proto/taulu); koko demossa vuoden 2026 jälkeen, ennen sokeripalaa (järjestys src/runko/jarjestys.json).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-taulu2f.d64",
+ "jatkuva": [
+  "vuosi2026"
+ ],
+ "_jatkuva": "Vuoden 2026 perään ilman pimennystä kuten taulu 1 vuoden 1989 perään: vuosi on lopussa tyhjä ja taulu valottuu iskulle. Taulu ($9800-$bf3f, spritet $8800 ja ruutu $8c00 taulu_initissa) mahtuu vuoden vapaaseen muistiin ($3500-$bfff), joten se esiladataan vuoden aikana.",
+ "vapaana_lopussa": [
+  "1a00-87ff",
+  "c000-cfff",
+  "e000-fdff"
+ ],
+ "_vapaana_lopussa": "Taulu käyttää vain $8800-$bf3f:ää (spritet, ruutu, koodi, bittikartta) ja nollasivua $f0-; vuoden 2026 muisti on vapaa, kun taulu on alkanut (jatkuva: kartoitus ei näe sitä vapaana). Sokeripalan alku SP0 $1a00-, SPP1 $5c00- ja SPPI $c000- esiladataan taulun aikana.",
+ "inc": "build/runko/part-taulu2f/files.inc",
+ "labels": [
+  "build/runko/part-taulu2f/payload.labels",
+  "build/taulu2f/taulu.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-taulu2f/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "    TAULU 2F",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "build/taulu2f/taulu2f_glue.asm",
+   "prg_dir": "build/taulu2f",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/taulu",
+  "demo",
+  "N=2f"
+ ]
+}

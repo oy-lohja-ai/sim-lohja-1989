@@ -1,0 +1,57 @@
+{
+ "_doc": "Osavaljas hillner (make part P=hillner). Hillnerin talo yksin: kamera-ajosta purun pimeyteen. Taulun lopussa purku_quiet palaa kehyksellä 3360 (VICE), sen jälkeen $1a00-$5bff on vapaa HIL_END:iin (3480) asti.",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-hillner.d64",
+ "jatkuva": [
+  "taulu2"
+ ],
+ "jatkuva_odota": 14,
+ "_jatkuva": "Taulun 2 perään ilman täysin mustaa väliä ja edellisen kohtauksen pystysuuntaista häiriötä (filmiefekti pois): taulu 2 häivyttää itsensä 14 kehystä aiemmin ja on lopussa 14 kehystä musta (src/proto/taulu MUSTA_2, taulun IRQ ei kirjoita mustalla), ja hil_prep (noin 8-10 kehystä) ajetaan niiden aikana (jatkuva_odota 14). hil_prep kirjoittaa pankin 2 bittikartan $a000- (taulun ruudun värit mustia, ei näy), spritelohkot $8000-$853f (taulun spritet $8800-) ja värimuistin (hires-taulu ei käytä sitä); taulun IRQ ja koodi $9800-$9fff sekä nollasivu $f0- pysyvät.",
+ "vapaana_lopussa": [
+  "1a00-5bff"
+ ],
+ "inc": "build/runko/part-hillner/files.inc",
+ "labels": [
+  "build/runko/part-hillner/payload.labels",
+  "build/hilint/hillner.labels",
+  "build/d64/kyltti.labels",
+  "build/d64/ajo.labels",
+  "build/d64/purku1.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-hillner/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "HILLNERIN TALO",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info-hillner.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/hil_glue.asm",
+   "prg_dir": "build/d64",
+   "pack": true
+  }
+ ]
+}

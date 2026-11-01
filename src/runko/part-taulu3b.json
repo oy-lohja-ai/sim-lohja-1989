@@ -1,0 +1,56 @@
+{
+ "_doc": "Osavaljas taulu3b (make part P=taulu3b, yleinen osalevy PART 99): mykkäelokuvan kerrontataulu 3b, teksti tekstit.yaml:n taulusta 3b (src/proto/taulu); koko demossa greetsien jälkeen, ennen kotia (järjestys src/runko/jarjestys.json).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-taulu3b.d64",
+ "vapaana_lopussa": [
+  "c000-cfff"
+ ],
+ "_vapaana_lopussa": "Greetsien ilta ($c000-$cfff, latausväli greetsit -> taulu3b) on päättynyt, kun taulu alkaa, eikä merkkitilan taulu ($6000-) käytä sitä: kodin KOTI2 esiladataan sinne, ja koti jatkuu saumana.",
+ "inc": "build/runko/part-taulu3b/files.inc",
+ "labels": [
+  "build/runko/part-taulu3b/payload.labels",
+  "build/taulu3b/taulu.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-taulu3b/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "    TAULU 3B",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "build/taulu3b/taulu3b_glue.asm",
+   "prg_dir": "build/taulu3b",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/taulu",
+  "demo",
+  "N=3b"
+ ]
+}

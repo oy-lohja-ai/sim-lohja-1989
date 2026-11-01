@@ -1,0 +1,54 @@
+{
+ "_doc": "Osavaljas taulu2d (make part P=taulu2d, yleinen osalevy PART 99): mykkäelokuvan kerrontataulu 2d, teksti tekstit.yaml:n taulusta 2d (src/proto/taulu); koko demossa Hillnerin purun jälkeen, ennen graafia (järjestys src/runko/jarjestys.json).",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-taulu2d.d64",
+ "levynvaihto_ennen": true,
+ "_levynvaihto_ennen": "Koko demossa levynvaihto Hillnerin jälkeen, ennen tätä taulua (ellei ZOO_LEVYNVAIHDOT valitse toisin, tools/disk/kokoa.py).",
+ "inc": "build/runko/part-taulu2d/files.inc",
+ "labels": [
+  "build/runko/part-taulu2d/payload.labels",
+  "build/taulu2d/taulu.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-taulu2d/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "    TAULU 2D",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "build/taulu2d/taulu2d_glue.asm",
+   "prg_dir": "build/taulu2d",
+   "pack": true
+  }
+ ],
+ "make": [
+  "-C",
+  "src/proto/taulu",
+  "demo",
+  "N=2d"
+ ]
+}

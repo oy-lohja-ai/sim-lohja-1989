@@ -1,0 +1,55 @@
+{
+ "_doc": "Osavaljas kaupungintalo (make part P=kaupungintalo, yleinen osalevy PART 99). Kaupungintalo yksin: kaupunginjohtaja pelaa, Hillnerille lähtee purkaja.",
+ "name": "SIM LOHJA 1989",
+ "id": "26",
+ "out": "build/part-kaupungintalo.d64",
+ "jatkuva": [
+  "taulu1b"
+ ],
+ "_jatkuva": "Taulun 1b perään ilman pimennystä: taulu häivyttää itsensä mustaksi ja näytön lähikuva alkaa iskulle. kt_init (kaupungintalo: vain nollasivu $30-$8f) ajetaan taulun aikana.",
+ "vapaana_lopussa": [
+  "8800-cfff",
+  "e000-feff"
+ ],
+ "_vapaana": "Peli (KT4 $2000-$5fff, KT5 $6000-$87cf, oma IRQ) alkaa kehyksessä PELI_VAIHTO (ydin $c000- jää pois) ja näyttö (KT2, KT3 $e000-) on ohi kehyksessä 122, jolloin taulun viimeinen askel lataa KT5:n: kokoa.py esilataa sen jälkeen seuraavan taulun ($9800-$bf3f). $ff00- ei: pelin IRQ-vektori.",
+ "inc": "build/runko/part-kaupungintalo/files.inc",
+ "labels": [
+  "build/runko/part-kaupungintalo/payload.labels",
+  "build/kaupungintalo/demo/kt.labels"
+ ],
+ "dir": [
+  {
+   "name": "SIM LOHJA 1989",
+   "src": "build/runko/part-kaupungintalo/boot.prg"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "  OY LOHJA AI",
+  " ZOOPARTY  2026",
+  "  KAUPUNGINTALO",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  "MUSIIKKI:",
+  "  APPELTRAD BY",
+  "  PATEMATHIC",
+  "SOITIN: LFT",
+  "LOADER BY KRILL",
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "INFO",
+   "seq": "src/runko/info.txt"
+  },
+  "ÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀÀ",
+  {
+   "name": "MUSIIKKI",
+   "label": "f_music",
+   "boot": true,
+   "bin": "build/runko/music.bin",
+   "at": "0800",
+   "pack": true
+  },
+  {
+   "names_from": "src/scene/kaupungintalo_glue.asm",
+   "prg_dir": "build/kaupungintalo/demo",
+   "pack": true
+  }
+ ]
+}

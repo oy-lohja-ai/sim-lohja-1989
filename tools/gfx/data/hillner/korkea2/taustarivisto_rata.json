@@ -1,0 +1,980 @@
+{
+ "rooli_varit": {
+  "1": "$d025 0",
+  "2": "oma (sprite kohtaisesti)",
+  "3": "$d026 12"
+ },
+ "spritet": [
+  {
+   "x_laajennus": true,
+   "y_laajennus": true,
+   "oma_vari": 15,
+   "sisalto": "taustatalot x 0-23",
+   "rata": [
+    {
+     "s": 0,
+     "x": 0,
+     "y": 66,
+     "nakyy": true
+    },
+    {
+     "s": 8,
+     "x": 0,
+     "y": 66,
+     "nakyy": true
+    },
+    {
+     "s": 16,
+     "x": 0,
+     "y": 65,
+     "nakyy": true
+    },
+    {
+     "s": 24,
+     "x": 0,
+     "y": 65,
+     "nakyy": true
+    },
+    {
+     "s": 32,
+     "x": 0,
+     "y": 64,
+     "nakyy": true
+    },
+    {
+     "s": 40,
+     "x": 0,
+     "y": 64,
+     "nakyy": true
+    },
+    {
+     "s": 48,
+     "x": 0,
+     "y": 63,
+     "nakyy": true
+    },
+    {
+     "s": 56,
+     "x": 0,
+     "y": 63,
+     "nakyy": true
+    },
+    {
+     "s": 64,
+     "x": 0,
+     "y": 62,
+     "nakyy": true
+    },
+    {
+     "s": 72,
+     "x": 0,
+     "y": 62,
+     "nakyy": true
+    },
+    {
+     "s": 80,
+     "x": 0,
+     "y": 60,
+     "nakyy": true
+    },
+    {
+     "s": 88,
+     "x": 0,
+     "y": 60,
+     "nakyy": true
+    },
+    {
+     "s": 96,
+     "x": 0,
+     "y": 59,
+     "nakyy": true
+    },
+    {
+     "s": 104,
+     "x": 0,
+     "y": 59,
+     "nakyy": true
+    },
+    {
+     "s": 112,
+     "x": 0,
+     "y": 57,
+     "nakyy": true
+    },
+    {
+     "s": 120,
+     "x": 0,
+     "y": 57,
+     "nakyy": false
+    },
+    {
+     "s": 128,
+     "x": 0,
+     "y": 56,
+     "nakyy": false
+    },
+    {
+     "s": 136,
+     "x": 0,
+     "y": 56,
+     "nakyy": false
+    },
+    {
+     "s": 144,
+     "x": 0,
+     "y": 55,
+     "nakyy": false
+    },
+    {
+     "s": 152,
+     "x": 0,
+     "y": 55,
+     "nakyy": false
+    },
+    {
+     "s": 160,
+     "x": 0,
+     "y": 51,
+     "nakyy": false
+    },
+    {
+     "s": 168,
+     "x": 0,
+     "y": 51,
+     "nakyy": false
+    },
+    {
+     "s": 176,
+     "x": 0,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 184,
+     "x": 0,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 192,
+     "x": 0,
+     "y": 37,
+     "nakyy": false
+    },
+    {
+     "s": 200,
+     "x": 0,
+     "y": 37,
+     "nakyy": false
+    },
+    {
+     "s": 208,
+     "x": 0,
+     "y": 30,
+     "nakyy": false
+    },
+    {
+     "s": 216,
+     "x": 0,
+     "y": 30,
+     "nakyy": false
+    },
+    {
+     "s": 224,
+     "x": 0,
+     "y": 23,
+     "nakyy": false
+    },
+    {
+     "s": 232,
+     "x": 0,
+     "y": 23,
+     "nakyy": false
+    },
+    {
+     "s": 240,
+     "x": 0,
+     "y": 17,
+     "nakyy": false
+    }
+   ]
+  },
+  {
+   "x_laajennus": true,
+   "y_laajennus": true,
+   "oma_vari": 15,
+   "sisalto": "taustatalot x 24-47",
+   "rata": [
+    {
+     "s": 0,
+     "x": 24,
+     "y": 66,
+     "nakyy": true
+    },
+    {
+     "s": 8,
+     "x": 24,
+     "y": 66,
+     "nakyy": true
+    },
+    {
+     "s": 16,
+     "x": 24,
+     "y": 65,
+     "nakyy": true
+    },
+    {
+     "s": 24,
+     "x": 24,
+     "y": 65,
+     "nakyy": true
+    },
+    {
+     "s": 32,
+     "x": 24,
+     "y": 64,
+     "nakyy": true
+    },
+    {
+     "s": 40,
+     "x": 24,
+     "y": 64,
+     "nakyy": true
+    },
+    {
+     "s": 48,
+     "x": 24,
+     "y": 63,
+     "nakyy": true
+    },
+    {
+     "s": 56,
+     "x": 24,
+     "y": 63,
+     "nakyy": true
+    },
+    {
+     "s": 64,
+     "x": 24,
+     "y": 62,
+     "nakyy": true
+    },
+    {
+     "s": 72,
+     "x": 24,
+     "y": 62,
+     "nakyy": true
+    },
+    {
+     "s": 80,
+     "x": 24,
+     "y": 60,
+     "nakyy": true
+    },
+    {
+     "s": 88,
+     "x": 24,
+     "y": 60,
+     "nakyy": false
+    },
+    {
+     "s": 96,
+     "x": 24,
+     "y": 59,
+     "nakyy": false
+    },
+    {
+     "s": 104,
+     "x": 24,
+     "y": 59,
+     "nakyy": false
+    },
+    {
+     "s": 112,
+     "x": 24,
+     "y": 57,
+     "nakyy": false
+    },
+    {
+     "s": 120,
+     "x": 24,
+     "y": 57,
+     "nakyy": false
+    },
+    {
+     "s": 128,
+     "x": 24,
+     "y": 56,
+     "nakyy": false
+    },
+    {
+     "s": 136,
+     "x": 24,
+     "y": 56,
+     "nakyy": false
+    },
+    {
+     "s": 144,
+     "x": 24,
+     "y": 55,
+     "nakyy": false
+    },
+    {
+     "s": 152,
+     "x": 24,
+     "y": 55,
+     "nakyy": false
+    },
+    {
+     "s": 160,
+     "x": 24,
+     "y": 51,
+     "nakyy": false
+    },
+    {
+     "s": 168,
+     "x": 24,
+     "y": 51,
+     "nakyy": false
+    },
+    {
+     "s": 176,
+     "x": 24,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 184,
+     "x": 24,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 192,
+     "x": 24,
+     "y": 37,
+     "nakyy": false
+    },
+    {
+     "s": 200,
+     "x": 24,
+     "y": 37,
+     "nakyy": false
+    },
+    {
+     "s": 208,
+     "x": 24,
+     "y": 30,
+     "nakyy": false
+    },
+    {
+     "s": 216,
+     "x": 24,
+     "y": 30,
+     "nakyy": false
+    },
+    {
+     "s": 224,
+     "x": 24,
+     "y": 23,
+     "nakyy": false
+    },
+    {
+     "s": 232,
+     "x": 24,
+     "y": 23,
+     "nakyy": false
+    },
+    {
+     "s": 240,
+     "x": 24,
+     "y": 17,
+     "nakyy": false
+    }
+   ]
+  },
+  {
+   "x_laajennus": true,
+   "y_laajennus": true,
+   "oma_vari": 15,
+   "sisalto": "taustatalot x 136-159",
+   "rata": [
+    {
+     "s": 0,
+     "x": 136,
+     "y": 66,
+     "nakyy": true
+    },
+    {
+     "s": 8,
+     "x": 136,
+     "y": 66,
+     "nakyy": true
+    },
+    {
+     "s": 16,
+     "x": 136,
+     "y": 65,
+     "nakyy": true
+    },
+    {
+     "s": 24,
+     "x": 136,
+     "y": 65,
+     "nakyy": true
+    },
+    {
+     "s": 32,
+     "x": 136,
+     "y": 64,
+     "nakyy": true
+    },
+    {
+     "s": 40,
+     "x": 136,
+     "y": 64,
+     "nakyy": true
+    },
+    {
+     "s": 48,
+     "x": 136,
+     "y": 63,
+     "nakyy": true
+    },
+    {
+     "s": 56,
+     "x": 136,
+     "y": 63,
+     "nakyy": true
+    },
+    {
+     "s": 64,
+     "x": 136,
+     "y": 62,
+     "nakyy": true
+    },
+    {
+     "s": 72,
+     "x": 136,
+     "y": 62,
+     "nakyy": true
+    },
+    {
+     "s": 80,
+     "x": 136,
+     "y": 60,
+     "nakyy": true
+    },
+    {
+     "s": 88,
+     "x": 136,
+     "y": 60,
+     "nakyy": true
+    },
+    {
+     "s": 96,
+     "x": 136,
+     "y": 59,
+     "nakyy": true
+    },
+    {
+     "s": 104,
+     "x": 136,
+     "y": 59,
+     "nakyy": false
+    },
+    {
+     "s": 112,
+     "x": 136,
+     "y": 57,
+     "nakyy": false
+    },
+    {
+     "s": 120,
+     "x": 136,
+     "y": 57,
+     "nakyy": false
+    },
+    {
+     "s": 128,
+     "x": 136,
+     "y": 56,
+     "nakyy": false
+    },
+    {
+     "s": 136,
+     "x": 136,
+     "y": 56,
+     "nakyy": false
+    },
+    {
+     "s": 144,
+     "x": 136,
+     "y": 55,
+     "nakyy": false
+    },
+    {
+     "s": 152,
+     "x": 136,
+     "y": 55,
+     "nakyy": false
+    },
+    {
+     "s": 160,
+     "x": 136,
+     "y": 51,
+     "nakyy": false
+    },
+    {
+     "s": 168,
+     "x": 136,
+     "y": 51,
+     "nakyy": false
+    },
+    {
+     "s": 176,
+     "x": 136,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 184,
+     "x": 136,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 192,
+     "x": 136,
+     "y": 37,
+     "nakyy": false
+    },
+    {
+     "s": 200,
+     "x": 136,
+     "y": 37,
+     "nakyy": false
+    },
+    {
+     "s": 208,
+     "x": 136,
+     "y": 30,
+     "nakyy": false
+    },
+    {
+     "s": 216,
+     "x": 136,
+     "y": 30,
+     "nakyy": false
+    },
+    {
+     "s": 224,
+     "x": 136,
+     "y": 23,
+     "nakyy": false
+    },
+    {
+     "s": 232,
+     "x": 136,
+     "y": 23,
+     "nakyy": false
+    },
+    {
+     "s": 240,
+     "x": 136,
+     "y": 17,
+     "nakyy": false
+    }
+   ]
+  },
+  {
+   "x_laajennus": false,
+   "y_laajennus": false,
+   "oma_vari": 14,
+   "sisalto": "kirkko 0",
+   "rata": [
+    {
+     "s": 0,
+     "x": 109,
+     "y": 52,
+     "nakyy": true
+    },
+    {
+     "s": 8,
+     "x": 109,
+     "y": 52,
+     "nakyy": true
+    },
+    {
+     "s": 16,
+     "x": 109,
+     "y": 51,
+     "nakyy": true
+    },
+    {
+     "s": 24,
+     "x": 109,
+     "y": 51,
+     "nakyy": true
+    },
+    {
+     "s": 32,
+     "x": 109,
+     "y": 51,
+     "nakyy": true
+    },
+    {
+     "s": 40,
+     "x": 109,
+     "y": 50,
+     "nakyy": true
+    },
+    {
+     "s": 48,
+     "x": 109,
+     "y": 50,
+     "nakyy": true
+    },
+    {
+     "s": 56,
+     "x": 109,
+     "y": 49,
+     "nakyy": true
+    },
+    {
+     "s": 64,
+     "x": 109,
+     "y": 49,
+     "nakyy": true
+    },
+    {
+     "s": 72,
+     "x": 109,
+     "y": 49,
+     "nakyy": true
+    },
+    {
+     "s": 80,
+     "x": 109,
+     "y": 48,
+     "nakyy": true
+    },
+    {
+     "s": 88,
+     "x": 109,
+     "y": 48,
+     "nakyy": false
+    },
+    {
+     "s": 96,
+     "x": 109,
+     "y": 47,
+     "nakyy": false
+    },
+    {
+     "s": 104,
+     "x": 109,
+     "y": 47,
+     "nakyy": false
+    },
+    {
+     "s": 112,
+     "x": 109,
+     "y": 46,
+     "nakyy": false
+    },
+    {
+     "s": 120,
+     "x": 109,
+     "y": 46,
+     "nakyy": false
+    },
+    {
+     "s": 128,
+     "x": 109,
+     "y": 46,
+     "nakyy": false
+    },
+    {
+     "s": 136,
+     "x": 109,
+     "y": 45,
+     "nakyy": false
+    },
+    {
+     "s": 144,
+     "x": 109,
+     "y": 45,
+     "nakyy": false
+    },
+    {
+     "s": 152,
+     "x": 109,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 160,
+     "x": 109,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 168,
+     "x": 109,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 176,
+     "x": 109,
+     "y": 43,
+     "nakyy": false
+    },
+    {
+     "s": 184,
+     "x": 109,
+     "y": 43,
+     "nakyy": false
+    },
+    {
+     "s": 192,
+     "x": 109,
+     "y": 42,
+     "nakyy": false
+    },
+    {
+     "s": 200,
+     "x": 109,
+     "y": 42,
+     "nakyy": false
+    },
+    {
+     "s": 208,
+     "x": 109,
+     "y": 42,
+     "nakyy": false
+    },
+    {
+     "s": 216,
+     "x": 109,
+     "y": 41,
+     "nakyy": false
+    },
+    {
+     "s": 224,
+     "x": 109,
+     "y": 41,
+     "nakyy": false
+    },
+    {
+     "s": 232,
+     "x": 109,
+     "y": 40,
+     "nakyy": false
+    },
+    {
+     "s": 240,
+     "x": 109,
+     "y": 40,
+     "nakyy": false
+    }
+   ]
+  },
+  {
+   "x_laajennus": false,
+   "y_laajennus": false,
+   "oma_vari": 14,
+   "sisalto": "kirkko 1",
+   "rata": [
+    {
+     "s": 0,
+     "x": 121,
+     "y": 52,
+     "nakyy": true
+    },
+    {
+     "s": 8,
+     "x": 121,
+     "y": 52,
+     "nakyy": true
+    },
+    {
+     "s": 16,
+     "x": 121,
+     "y": 51,
+     "nakyy": true
+    },
+    {
+     "s": 24,
+     "x": 121,
+     "y": 51,
+     "nakyy": true
+    },
+    {
+     "s": 32,
+     "x": 121,
+     "y": 51,
+     "nakyy": true
+    },
+    {
+     "s": 40,
+     "x": 121,
+     "y": 50,
+     "nakyy": true
+    },
+    {
+     "s": 48,
+     "x": 121,
+     "y": 50,
+     "nakyy": true
+    },
+    {
+     "s": 56,
+     "x": 121,
+     "y": 49,
+     "nakyy": true
+    },
+    {
+     "s": 64,
+     "x": 121,
+     "y": 49,
+     "nakyy": true
+    },
+    {
+     "s": 72,
+     "x": 121,
+     "y": 49,
+     "nakyy": true
+    },
+    {
+     "s": 80,
+     "x": 121,
+     "y": 48,
+     "nakyy": true
+    },
+    {
+     "s": 88,
+     "x": 121,
+     "y": 48,
+     "nakyy": true
+    },
+    {
+     "s": 96,
+     "x": 121,
+     "y": 47,
+     "nakyy": false
+    },
+    {
+     "s": 104,
+     "x": 121,
+     "y": 47,
+     "nakyy": false
+    },
+    {
+     "s": 112,
+     "x": 121,
+     "y": 46,
+     "nakyy": false
+    },
+    {
+     "s": 120,
+     "x": 121,
+     "y": 46,
+     "nakyy": false
+    },
+    {
+     "s": 128,
+     "x": 121,
+     "y": 46,
+     "nakyy": false
+    },
+    {
+     "s": 136,
+     "x": 121,
+     "y": 45,
+     "nakyy": false
+    },
+    {
+     "s": 144,
+     "x": 121,
+     "y": 45,
+     "nakyy": false
+    },
+    {
+     "s": 152,
+     "x": 121,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 160,
+     "x": 121,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 168,
+     "x": 121,
+     "y": 44,
+     "nakyy": false
+    },
+    {
+     "s": 176,
+     "x": 121,
+     "y": 43,
+     "nakyy": false
+    },
+    {
+     "s": 184,
+     "x": 121,
+     "y": 43,
+     "nakyy": false
+    },
+    {
+     "s": 192,
+     "x": 121,
+     "y": 42,
+     "nakyy": false
+    },
+    {
+     "s": 200,
+     "x": 121,
+     "y": 42,
+     "nakyy": false
+    },
+    {
+     "s": 208,
+     "x": 121,
+     "y": 42,
+     "nakyy": false
+    },
+    {
+     "s": 216,
+     "x": 121,
+     "y": 41,
+     "nakyy": false
+    },
+    {
+     "s": 224,
+     "x": 121,
+     "y": 41,
+     "nakyy": false
+    },
+    {
+     "s": 232,
+     "x": 121,
+     "y": 40,
+     "nakyy": false
+    },
+    {
+     "s": 240,
+     "x": 121,
+     "y": 40,
+     "nakyy": false
+    }
+   ]
+  }
+ ],
+ "koordinaatit": "x, y = vasen yläkulma ruudulla (MC-px, rivi) kamera-ajon kohdassa s, horisontti rivillä 66; laajennettu sprite on ruudulla 24 MC px x 42 riviä; bittikartan takana"
+}
