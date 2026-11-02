@@ -7,7 +7,7 @@ Lohja, 1989. The mayor plays the newly released Sim Lohja and gets an idea: bull
 boxes. A C64 demo about the real Lohja, from Hillner's house to Lohjantähti and Sokeripala. All text on screen is in
 Finnish.
 
-- Production page: https://oylohja.ai/productions/sim-lohja-1989/
+- Production page: https://oy.lohja.ai.ip0.fi/productions/sim-lohja-1989/
 - Video: https://www.youtube.com/watch?v=TMfqbFdMmgM
 
 This repository holds the group's own source code and data for the demo. Together with the third-party parts that
